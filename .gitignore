@@ -1,0 +1,21 @@
+# Data files (too large / confidential for public repo)
+1_data/
+*.dta
+
+# Claude project documentation (local only)
+CLAUDE.md
+
+# Stata temporary and log files
+4_log/
+*.log
+*.smcl
+
+# Word document (binary, not suited for git)
+*.docx
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Stata backup files
+*~
