@@ -100,4 +100,4 @@ Arpan Acharya
 
 ## License
 
-This project is for academic research purposes. The NLSS IV data is property of the Central Bureau of Statistics, Nepal.
+This project is for academic research purposes. The NLSS IV data is property of the National Statistics Office, Nepal.
