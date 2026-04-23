@@ -94,8 +94,8 @@ preserve
     rename q01_05 head_marital
     rename q01_07 caste_ethnicity
 
-    * Female-headed household dummy
-    gen head_female = (head_sex == 1) if !missing(head_sex)
+    * Female-headed household dummy (q01_02: 1=Male, 2=Female)
+    gen head_female = (head_sex == 2) if !missing(head_sex)
 
     keep psu_number hh_number idcode head_sex head_age head_female ///
          head_marital caste_ethnicity

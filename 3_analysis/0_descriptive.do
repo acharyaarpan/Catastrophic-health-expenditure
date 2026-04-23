@@ -119,7 +119,7 @@ foreach v in head_age hhsize adult_equiv dep_ratio ///
              hh_comm_total_30d total_consumption pc_cons_ae {
     svy: mean `v', over(che_comm_100)
     * Test for difference
-    test [`v']0 = [`v']1
+    test _b[c.`v'@0bn.che_comm_100] = _b[c.`v'@1.che_comm_100]
 }
 
 di _n "--- Binary: Proportion by CHE status ---"
