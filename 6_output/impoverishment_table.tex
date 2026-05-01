@@ -1,0 +1,59 @@
+% ===========================================================================
+%  Catastrophic Health Expenditure -- NLSS IV
+%  Impoverishment from out-of-pocket health spending
+%  Generated: April 2026
+% ===========================================================================
+%
+% Required packages (already in your preamble for the other tables):
+%   \usepackage{booktabs}
+%
+% Drop this file into your Overleaf project and \input{impoverishment_table.tex}
+% next to where you discuss the OOP / Pen's Parade results.
+% ===========================================================================
+
+
+\subsection*{Out-of-pocket health spending and impoverishment}
+
+Following the Wagstaff and van Doorslaer (2003) framework, we measure the
+impoverishing impact of out-of-pocket (OOP) health spending as the increase
+in poverty headcount once households' annualised OOP is netted out of
+consumption. We use the official NLSS IV per-capita poverty line of
+NPR~72{,}908 per person per year, applied to the deflated per-capita
+consumption variable (\texttt{pcep}) that the Central Bureau of Statistics
+uses to compute the official poverty headcount; per-capita OOP is deflated
+by the same household-level Paasche price index for unit consistency. By
+construction, gross consumption against the line reproduces the official
+20.27\% poverty headcount; netting OOP out of \texttt{pcep} pushes an
+additional 3.13 percentage points of the population below the line, equivalent
+to roughly 899{,}000 Nepalis pulled into poverty each year by health-related
+out-of-pocket expenditure.
+
+For continuity with the earlier CHE poverty draft in the previous try folder,
+we also retain the simple nominal per-capita takeaway as a sensitivity check:
+using \texttt{pctot\_consumption} against the same line gives a 29.0\%
+poverty headcount before OOP and 31.6\% after OOP, an OOP-induced increase of
+2.6 percentage points. This sensitivity is not used as the official
+impoverishment estimate because \texttt{pctot\_consumption} is nominal whereas
+the NLSS poverty line is applied to the deflated \texttt{pcep} welfare measure.
+
+\begin{table}[htbp]
+\centering
+\caption{OOP-induced impoverishment, Nepal NLSS IV (2022/23)}
+\label{tab:impoverishment}
+\small
+\begin{tabular}{lr}
+\hline\hline
+\textbf{Indicator} & \textbf{Value} \\
+\hline
+Poverty headcount, before OOP (gross \texttt{pcep})         & 20.27\% \\
+Poverty headcount, after OOP (\texttt{pcep} net of real OOP) & 23.40\% \\
+Impoverishment effect of OOP                                & $+3.13$ pp \\
+\addlinespace
+Households crossing the poverty line due to OOP             & 264 \\
+Population pushed below the poverty line due to OOP         & $\sim$899{,}000 \\
+\addlinespace
+Previous-try nominal per-capita sensitivity                 & 29.0\% $\rightarrow$ 31.6\% ($+2.6$ pp) \\
+\hline\hline
+\multicolumn{2}{p{12cm}}{\footnotesize \textit{Notes:} Population estimates use NLSS IV individual sampling weights ($\sum \texttt{ind\_wt} \approx 28.74$ million). Welfare measure is \texttt{pcep} -- per-capita real consumption deflated by the Paasche spatial price index, as used in NLSS's official poverty calculation. Out-of-pocket health spending is communicable-disease/injury cost in the past 30 days (\texttt{hh\_comm\_total\_30d}) annualised by $\times 12$, divided by household size, then deflated by the same Paasche index. Poverty line: NPR~72{,}908/yr per capita (\texttt{pline}). Source: NLSS IV.} \\
+\end{tabular}
+\end{table}
