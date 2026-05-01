@@ -90,9 +90,9 @@ svy: logit che_comm_100 ///
     improved_sanitation improved_water clean_fuel         /// Living standards
     receives_remittance has_loan poor                     /// Economic
     i.head_edu_n                                          /// Education (ref: No education)
-    ib2.caste_ethnicity                                   /// Caste (ref: Hill Caste = 2)
-    ib2.ad_4                                              /// Area type (ref: Rural = 2)
-    ib2.prov                                              /// Province (ref: Bagmati = 2)
+    ib21.caste_ethnicity                                  /// Caste (ref: Mt./Hill Janajati = 21)
+    ib3.ad_4                                               /// Area type (ref: Rural = 3)
+    ib3.prov                                               /// Province (ref: Bagmati = 3)
     , or
 
 estimates store m1_comm10
@@ -113,15 +113,14 @@ di "MODEL 2: Combined (communicable + NCD) > 10% monthly consumption"
 di "{hline 60}"
 
 svy: logit che_combined_100 ///
-    head_age hhsize head_female                          ///
+    head_age hhsize head_female head_literate              ///
     has_elderly has_under5 has_disabled_member            ///
-    has_health_insurance                                  ///
     improved_sanitation improved_water clean_fuel         ///
     receives_remittance has_loan poor                     ///
     i.head_edu_n                                          ///
-    ib2.caste_ethnicity                                   ///
-    ib2.ad_4                                              ///
-    ib2.prov                                              ///
+    ib21.caste_ethnicity                                  ///
+    ib3.ad_4                                               ///
+    ib3.prov                                               ///
     , or
 
 estimates store m2_comb10
@@ -138,15 +137,14 @@ di "MODEL 3: Communicable > 20% monthly consumption"
 di "{hline 60}"
 
 svy: logit che_comm_20 ///
-    head_age hhsize head_female                          ///
+    head_age hhsize head_female head_literate              ///
     has_elderly has_under5 has_disabled_member            ///
-    has_health_insurance                                  ///
     improved_sanitation improved_water clean_fuel         ///
     receives_remittance has_loan poor                     ///
     i.head_edu_n                                          ///
-    ib2.caste_ethnicity                                   ///
-    ib2.ad_4                                              ///
-    ib2.prov                                              ///
+    ib21.caste_ethnicity                                  ///
+    ib3.ad_4                                               ///
+    ib3.prov                                               ///
     , or
 
 estimates store m3_comm20
@@ -163,15 +161,14 @@ di "MODEL 4: Combined (communicable + NCD) > 20% monthly consumption"
 di "{hline 60}"
 
 svy: logit che_combined_20 ///
-    head_age hhsize head_female                          ///
+    head_age hhsize head_female head_literate              ///
     has_elderly has_under5 has_disabled_member            ///
-    has_health_insurance                                  ///
     improved_sanitation improved_water clean_fuel         ///
     receives_remittance has_loan poor                     ///
     i.head_edu_n                                          ///
-    ib2.caste_ethnicity                                   ///
-    ib2.ad_4                                              ///
-    ib2.prov                                              ///
+    ib21.caste_ethnicity                                  ///
+    ib3.ad_4                                               ///
+    ib3.prov                                               ///
     , or
 
 estimates store m4_comb20
@@ -193,7 +190,7 @@ esttab m1_comm10 m2_comb10 m3_comm20 m4_comb20, ///
     title("Determinants of Catastrophic Health Expenditure — Survey-Weighted Odds Ratios") ///
     star(* 0.05 ** 0.01 *** 0.001)                 ///
     note("Survey-weighted logistic regression. PSU clustering with household weights." ///
-         "Reference: Education=No education, Caste=Hill Caste, Area=Rural, Province=Bagmati.") ///
+         "Reference: Education=No education, Caste=Mt./Hill Janajati, Area=Rural, Province=Bagmati.") ///
     label varwidth(35)
 
 * Export to RTF
@@ -208,7 +205,7 @@ esttab m1_comm10 m2_comb10 m3_comm20 m4_comb20 ///
     title("Determinants of Catastrophic Health Expenditure — Survey-Weighted Odds Ratios") ///
     star(* 0.05 ** 0.01 *** 0.001)               ///
     note("Survey-weighted logistic regression. PSU clustering with household weights." ///
-         "Reference: Education=No education, Caste=Hill Caste, Area=Rural, Province=Bagmati.") ///
+         "Reference: Education=No education, Caste=Mt./Hill Janajati, Area=Rural, Province=Bagmati.") ///
     label varwidth(35)
 
 di _n "{hline 60}"
@@ -218,35 +215,49 @@ di "{hline 60}"
 
 *==============================================================================*
 *                                                                              *
-*     SECTION 7: AVERAGE MARGINAL EFFECTS (Model 1 — Primary)                 *
+*     SECTION 7: AVERAGE MARGINAL EFFECTS                                      *
 *                                                                              *
 *==============================================================================*
 
+* --- 7a: AME for Model 1 (GHE > 10%) ---
 di _n "{hline 60}"
-di "AVERAGE MARGINAL EFFECTS — Model 1 (Communicable > 10%)"
+di "AVERAGE MARGINAL EFFECTS — Model 1 (GHE > 10%)"
 di "{hline 60}"
 
-* Restore primary model and compute AMEs
 estimates restore m1_comm10
 margins, dydx(*) post
-
 estimates store m1_margins
 
-esttab m1_margins, ///
+* --- 7b: AME for Model 3 (GHE > 20%) ---
+di _n "{hline 60}"
+di "AVERAGE MARGINAL EFFECTS — Model 3 (GHE > 20%)"
+di "{hline 60}"
+
+estimates restore m3_comm20
+margins, dydx(*) post
+estimates store m3_margins
+
+* --- 7c: Display both AME side-by-side ---
+esttab m1_margins m3_margins, ///
     cells(b(star fmt(4)) se(par fmt(4))) ///
     stats(N, fmt(0) labels("N"))         ///
-    title("Average Marginal Effects — CHE (Communicable > 10%)") ///
+    mtitles("GHE > 10%" "GHE > 20%")    ///
+    title("Average Marginal Effects — Determinants of CHE") ///
     star(* 0.05 ** 0.01 *** 0.001)       ///
-    note("Survey-weighted average marginal effects from svy: logit.") ///
+    note("Survey-weighted average marginal effects from svy: logit." ///
+         "GHE = General health expenditure as share of monthly consumption.") ///
     label varwidth(35)
 
-esttab m1_margins ///
-    using "$tab/marginal_effects_m1.rtf", replace ///
+* --- 7d: Export AME to RTF ---
+esttab m1_margins m3_margins ///
+    using "$tab/marginal_effects.rtf", replace ///
     cells(b(star fmt(4)) se(par fmt(4))) ///
     stats(N, fmt(0) labels("N"))         ///
-    title("Average Marginal Effects — CHE (Communicable > 10%)") ///
+    mtitles("GHE > 10%" "GHE > 20%")    ///
+    title("Average Marginal Effects — Determinants of CHE") ///
     star(* 0.05 ** 0.01 *** 0.001)       ///
-    note("Survey-weighted average marginal effects from svy: logit.") ///
+    note("Survey-weighted average marginal effects from svy: logit." ///
+         "GHE = General health expenditure as share of monthly consumption.") ///
     label varwidth(35)
 
 

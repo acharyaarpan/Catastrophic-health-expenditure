@@ -4,6 +4,7 @@
 
 # Claude project documentation (local only)
 CLAUDE.md
+AGENTS.md
 
 # Stata temporary and log files
 4_log/
@@ -19,3 +20,5 @@ Thumbs.db
 
 # Stata backup files
 *~
+5_documentation/*.pdf
+0_archive/*.pdf

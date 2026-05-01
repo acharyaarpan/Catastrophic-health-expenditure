@@ -36,7 +36,20 @@ use "$data_clean/catastrophic_health_exp.dta", clear
 *                                                                              *
 *==============================================================================*
 
-* Set survey design: PSU clustering + household weights
+* NOTE on weights:
+*   This file uses TWO survey designs depending on the variable. The choice
+*   of weight is documented in CLAUDE.md (section "Descriptive Table Weights").
+*     - HH-weighted (hhs_wt): household-level facts (head characteristics,
+*       household composition, household health spending, CHE outcomes,
+*       household services like loans/remittances).
+*     - Ind-weighted (ind_wt): population-level facts where the individual
+*       is the unit of interest or where exposure is shared by everyone in
+*       the household (sanitation, water, cooking fuel, poverty status,
+*       caste/ethnicity, province, area type, consumption quintile).
+*
+* We re-svyset each time we switch between the two designs.
+
+* Default: household weights (used in regressions and most descriptives)
 svyset psu_number [pw = hhs_wt]
 
 
@@ -66,6 +79,7 @@ label variable head_edu_n "Education of HH head (ordered)"
 *==============================================================================*
 *                                                                              *
 *     SECTION 3: OVERALL WEIGHTED DESCRIPTIVE STATISTICS                       *
+*     One weight per variable (see notes above and CLAUDE.md).                 *
 *                                                                              *
 *==============================================================================*
 
@@ -73,34 +87,93 @@ di _n "{hline 70}"
 di "TABLE 1a: OVERALL WEIGHTED SAMPLE CHARACTERISTICS (N = 9,600)"
 di "{hline 70}"
 
-di _n "--- Continuous Variables (weighted) ---"
+*------------------------------------------------------------------------------*
+* 3.1a Continuous variables  ->  HH WEIGHTS
+*      Household-level facts (head age, household size, household-level
+*      health spending and total consumption).
+*------------------------------------------------------------------------------*
+svyset psu_number [pw = hhs_wt]
+
+di _n "--- Continuous Variables (HH-weighted) ---"
 svy: mean head_age hhsize adult_equiv dep_ratio ///
          hh_comm_total_30d hh_ncd_total_annual hh_ncd_total_monthly ///
-         total_consumption pc_cons_ae pctot_consumption
+         total_consumption
 estat sd
 
-di _n "--- Categorical / Binary Variables (weighted proportions) ---"
+*------------------------------------------------------------------------------*
+* 3.1b Continuous variables  ->  INDIVIDUAL WEIGHTS
+*      Per-capita consumption is a population-level living-standard measure,
+*      so we report it weighted by individuals. pctot_consumption (simple
+*      per-capita) is reported immediately before pc_cons_ae (adult-
+*      equivalent-adjusted) so reviewers see both.
+*------------------------------------------------------------------------------*
+svyset psu_number [pw = ind_wt]
+
+di _n "--- Continuous Variables (Individual-weighted) ---"
+svy: mean pctot_consumption pc_cons_ae
+estat sd
+
+*------------------------------------------------------------------------------*
+* 3.2 Binary variables  ->  HH WEIGHTS
+*     Head characteristics, household composition, remittances, loans, and
+*     all CHE outcomes (combined>10% / combined>20% intentionally dropped).
+*------------------------------------------------------------------------------*
+svyset psu_number [pw = hhs_wt]
+
+di _n "--- Binary Variables, HH-weighted ---"
 foreach v in head_female head_literate has_elderly has_under5 has_disabled_member ///
-             improved_sanitation improved_water clean_fuel ///
-             receives_remittance remit_absentee remit_other has_loan poor ///
-             che_comm_100 che_combined_100 che_comm_20 che_combined_20 {
+             receives_remittance remit_absentee remit_other has_loan ///
+             che_comm_100 che_comm_20 {
     svy: proportion `v'
 }
 
-di _n "--- Education of Head (weighted) ---"
+*------------------------------------------------------------------------------*
+* 3.3 Binary variables  ->  INDIVIDUAL WEIGHTS
+*     Sanitation, water, cooking fuel, and poverty status are population-level
+*     exposures. CHE outcomes are reported under BOTH weights in Table 1 so
+*     readers can compare the household-level prevalence ("% of households")
+*     with the population-level exposure ("% of population in a CHE
+*     household"); the two framings answer different questions. Regressions
+*     in 1_logit_che.do remain HH-weighted because the unit of analysis is
+*     the household.
+*------------------------------------------------------------------------------*
+svyset psu_number [pw = ind_wt]
+
+di _n "--- Binary Variables, Individual-weighted ---"
+foreach v in improved_sanitation improved_water clean_fuel poor ///
+             che_comm_100 che_comm_20 {
+    svy: proportion `v'
+}
+
+*------------------------------------------------------------------------------*
+* 3.4 Education of HH head  ->  HH WEIGHTS
+*------------------------------------------------------------------------------*
+svyset psu_number [pw = hhs_wt]
+
+di _n "--- Education of Head (HH-weighted) ---"
 svy: proportion head_edu_n
 
-di _n "--- Caste/Ethnicity (weighted) ---"
+*------------------------------------------------------------------------------*
+* 3.5 Caste/ethnicity, province, area type, quintile  ->  INDIVIDUAL WEIGHTS
+*     These describe the population distribution rather than the household
+*     distribution.
+*------------------------------------------------------------------------------*
+svyset psu_number [pw = ind_wt]
+
+di _n "--- Caste/Ethnicity (Individual-weighted) ---"
 svy: proportion caste_ethnicity
 
-di _n "--- Area Type (weighted) ---"
-svy: proportion ad_4
-
-di _n "--- Province (weighted) ---"
+di _n "--- Province (Individual-weighted) ---"
 svy: proportion prov
 
-di _n "--- Consumption Quintile (weighted) ---"
+di _n "--- Area Type (Individual-weighted) ---"
+svy: proportion ad_4
+
+di _n "--- Consumption Quintile (Individual-weighted) ---"
 svy: proportion quintile_pcep
+
+* Restore default HH weighting for any downstream code in this session
+svyset psu_number [pw = hhs_wt]
 
 
 *==============================================================================*
