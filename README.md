@@ -143,8 +143,8 @@ Latest monthly no-addback Pen's Parade summary:
 - pre-OOPG poverty: 20.27%
 - post-OOPG poverty: 23.40%
 - OOPG-associated increase: +3.13 percentage points
-- people pushed below poverty line: about 899,000
-- households pushed below poverty line: 264
+- poverty crossing: 264 sampled households, representing about 194,000
+  households / 899,000 people, are pushed below the poverty line
 - households with negative raw post-OOPG welfare before flooring: 42
 
 ## Methods Summary
