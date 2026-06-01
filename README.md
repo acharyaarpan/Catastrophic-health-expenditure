@@ -12,6 +12,11 @@ The active project is now OOPG-only. Older combined-OOP, regression,
 audit-workbook, individual-level, Word-draft, and Pen's Parade experiments are
 archived and are not part of the current manuscript workflow.
 
+June 2026 note: a separate `shivasir/` rerun folder is present for review. It
+mirrors the OOPG pipeline and adds a no-addback monthly Pen's Parade plus audit
+workbooks for the current impoverishment-method discussion. Treat `shivasir/`
+as a parallel review workspace, not as the canonical root pipeline.
+
 ## Folder Structure
 
 ```text
@@ -32,6 +37,7 @@ consumption/
 |   |-- main_output/
 |   |   `-- manuscript/
 |   `-- archive/
+|-- shivasir/                  review rerun: OOPG pipeline + monthly parade audit
 `-- 0_archive/
 ```
 
@@ -74,6 +80,15 @@ Then build the LaTeX manuscript source and figure:
 python 3_analysis\02_build_oopg_manuscript.py
 ```
 
+For the Shiva sir review rerun:
+
+```powershell
+python shivasir\3_analysis\02_build_oopg_manuscript.py
+python shivasir\3_analysis\03_oopg_pens_parade_monthly.py
+node shivasir\3_analysis\04_build_oopg_pens_parade_workbook.mjs
+node shivasir\3_analysis\05_build_oopg_pens_parade_simple_workbook.mjs
+```
+
 Compile from:
 
 ```text
@@ -108,6 +123,29 @@ pdflatex oopg_che_manuscript.tex
     |-- oopg_method_parameters.csv
     `-- oopg_budget_share_curve_data.csv
 ```
+
+The Shiva sir rerun writes the monthly Pen's Parade review files to:
+
+```text
+shivasir/6_output/main_output/manuscript/
+|-- pictures/
+|   |-- oopg_budget_share_curve.png
+|   `-- oopg_pens_parade_noadd_monthly.png
+`-- tables/
+    |-- oopg_pens_parade_monthly_data.csv
+    |-- oopg_pens_parade_monthly_summary.json
+    |-- oopg_pens_parade_monthly_audit.xlsx
+    `-- oopg_pens_parade_simple.xlsx
+```
+
+Latest monthly no-addback Pen's Parade summary:
+
+- pre-OOPG poverty: 20.27%
+- post-OOPG poverty: 23.40%
+- OOPG-associated increase: +3.13 percentage points
+- people pushed below poverty line: about 899,000
+- households pushed below poverty line: 264
+- households with negative raw post-OOPG welfare before flooring: 42
 
 ## Methods Summary
 
@@ -165,6 +203,19 @@ pcep < pline
 with individual weights. The active validation target is 20.27%. Health
 payments are never subtracted from `pcep`.
 
+For the Shiva sir monthly no-addback Pen's Parade only, the displayed audit
+scenario uses:
+
+```text
+pre-OOPG welfare      = pcep / 12
+monthly OOPG real     = (oopg / hhsize) / paasche
+raw post-OOPG welfare = pre-OOPG welfare - monthly OOPG real
+post-OOPG welfare     = max(raw post-OOPG welfare, 0)
+```
+
+This is retained for visual/audit review of the direct-subtraction convention;
+do not confuse it with the active manuscript's addback poverty method.
+
 ## Requirements
 
 - Stata 17 or newer
@@ -183,6 +234,8 @@ The active scripts check that:
 - OOPG-addback total and nonfood denominators are positive
 - `pre_oopg >= pcep`
 - adult-equivalence CTP threshold indicators are monotonic
+- the Shiva sir no-addback monthly Pen's Parade has 42 households with negative
+  raw post-OOPG welfare before zero-flooring
 
 ## Author
 
