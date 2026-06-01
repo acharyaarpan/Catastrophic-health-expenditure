@@ -1,0 +1,5 @@
+parameter,value,note
+food_share_p45,.4821316516115037,weighted 45th percentile of OOPG-inclusive food share
+food_share_p55,.5261642768842855,weighted 55th percentile of OOPG-inclusive food share
+middle_band_households,930,unweighted count in weighted 45th-55th band
+subsistence_line_ae_mo,8014.258409660657,monthly NPR per adult equivalent

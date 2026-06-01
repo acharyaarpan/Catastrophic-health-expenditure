@@ -1,0 +1,7 @@
+weight,scope,denominator,threshold,che_variable,overshoot_variable,headcount,headcount_se,overshoot,overshoot_se,mpo
+hhs_wt,oopg,ctp_ae,.1,che_oopg_ctp10_ae,over_oopg_ctp10_ae,.1528058757446726,.0073232213,.022447607,.0013041274,.14690277
+hhs_wt,oopg,ctp_ae,.25,che_oopg_ctp25_ae,over_oopg_ctp25_ae,.0502278087933075,.0032931415,.0090475939,.00070633861,.18013117
+hhs_wt,oopg,ctp_ae,.4,che_oopg_ctp40_ae,over_oopg_ctp40_ae,.0236101211977846,.002030828,.0038848177,.00038605867,.16454035
+ind_wt,oopg,ctp_ae,.1,che_oopg_ctp10_ae,over_oopg_ctp10_ae,.1654437199988581,.0089361733,.023726087,.0015892584,.14340882
+ind_wt,oopg,ctp_ae,.25,che_oopg_ctp25_ae,over_oopg_ctp25_ae,.0539820805900124,.0041992227,.0093275597,.00086042623,.17278993
+ind_wt,oopg,ctp_ae,.4,che_oopg_ctp40_ae,over_oopg_ctp40_ae,.0240939260099481,.0023459613,.0039093983,.00043761963,.16225658

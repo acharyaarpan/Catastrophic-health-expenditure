@@ -1,0 +1,34 @@
+canonical_var,description,nlss_ii_source_file,nlss_ii_variable,transformation_or_notes,status
+psu_number,Primary sampling unit identifier,,,,pending
+hh_number,Household identifier within PSU,,,,pending
+hhs_wt,Household survey weight,,,,pending
+ind_wt,Individual/person survey weight,,,,pending
+hhsize,Household size,,,,pending
+prov,Province or comparable geography,,,,pending
+domain,Survey domain,,,,pending
+ad_4,Area type comparable to NLSS IV urban/rural categories,,,,pending
+pcep,Official real per-capita consumption,,,,pending
+pcep_food,Real per-capita food consumption,,,,pending
+pcep_nonfood,Real per-capita nonfood consumption,,,,pending
+pline,Official total poverty line,,,,pending
+fpline,Official food poverty line,,,,pending
+paasche,Household price index or equivalent deflator,,,,pending
+oopg,Short-recall acute/illness/injury OOP monthly household amount,,,,pending
+oopg_ann,Annualized oopg,,,,pending
+oop,Total OOP scope comparable to NLSS IV oopg plus chronic/NCD spending,,,,pending
+oop_ann,Annual OOP scope,,,,pending
+head_sex,Sex of household head,,,,pending
+head_age,Age of household head,,,,pending
+head_marital,Marital status of household head,,,,pending
+caste_ethnicity,Caste/ethnicity of household head,,,,pending
+head_education,Head's own education measure,,,,pending
+head_edu_level,Recoded head education level,,,,pending
+head_literate,Head literacy indicator,,,,pending
+has_disabled_member,Any disabled or chronic-condition member indicator,,,,pending
+improved_sanitation,Improved sanitation indicator,,,,pending
+improved_water,Improved water indicator,,,,pending
+clean_fuel,Clean cooking fuel indicator,,,,pending
+receives_remittance,Household receives remittance indicator,,,,pending
+has_loan,Household has loan or borrowing indicator,,,,pending
+official_poverty_rate,Official NLSS II poverty benchmark for validation,,,,pending
+expected_households,Expected number of households after cleaning,,,,pending

@@ -1,16 +1,12 @@
 *------------------------------------------------------------------------------*
-*           		 This is the templet master do file				           *
+*                 Master do-file: active OOPG manuscript workflow              *
 /*
 
-	Author:				Arpan
-	Date created:		20th April 2026
-	Date updated:		20th April 2026
-	Last updated by:	Arpan
+    Author:             Arpan
+    Last updated by:    Codex
 
-	Notes:
-						This is a templet master do file.
-			
-	Dependencies:		This do file is not dependendent on any other do files.
+    Notes:
+        Runs the active OOPG-only data preparation and analysis pipeline.
 
 */
 
@@ -42,6 +38,10 @@ cap clear frames
 	if "`c(username)'" == "Kapil Pokhrel" {
 		global workspace "C:\Users\iprad\OneDrive\Documents\GitHub\NLSSiv_consumption"
 	}
+
+	if "$workspace" == "" & fileexists("D:/Projects/CIH-project/consumption/0_master.do") {
+		global workspace "D:/Projects/CIH-project/consumption"
+	}
 	
 	**# Sub folder macros (global)
 	global data 			"$workspace/1_data"
@@ -53,7 +53,10 @@ cap clear frames
 	global	analysis		"$workspace/3_analysis"	
 	global	log				"$workspace/4_log"
 	global	doc				"$workspace/5_documentation"
-	global	tab				"$workspace/6_output"
+	global	tab				"$workspace/6_output/main_output"
+
+	cap mkdir "$workspace/6_output"
+	cap mkdir "$tab"
 	
 
 	*--------------------------------------------------------------------------*
@@ -66,32 +69,9 @@ cap clear frames
 	} 
 	
 	*--------------------------------------------------------------------------*
-	**# Packages check
-	
-	** Setting ado path
+	**# Ado path
 	adopath + "${prep}/ado"
 	adopath + "${analysis}/ado"
-	
-	** List all required packages below as local. !! No SPACES in package name !!
-	local packages "estout texify"
-	
-	foreach package in `packages' {
-		cap which `package'
-		if _rc {
-			if "`package'"=="estout" {
-				** Steps to install specific package
-				ssc install estout
-			}
-			if "`package'"=="texify" {
-				** Steps to install specific package
-				ssc install texify
-			}
-			else {
-				di as error "Need to install following package: `package'"
-				search `package'
-			}
-		}
-	}
 	
 	*--------------------------------------------------------------------------*
 	**# Date/time macro (global)
@@ -110,19 +90,17 @@ cap clear frames
 
 cd "$workspace"
 
-*Project1: Working for cleaning consumption (NLSS IV)
+*Project: OOPG catastrophic health expenditure analysis (NLSS IV)
 
-doedit "$prep/1_catastrophic.do"
+do "$prep/1_catastrophic.do"
 
 *Phase 2: Analysis
 
-doedit "$analysis/0_descriptive.do"
-doedit "$analysis/1_logit_che.do"
+do "$analysis/01_oopg_che_analysis.do"
 
-
-*Project2 : Also cleaning health related expenditure for something else
 /*
-doedit "$prep/6_health_exp.do"
+Build the manuscript after Stata finishes:
+    python 3_analysis\02_build_oopg_manuscript.py
 */
 
 *------------------------------------------------------------------------------*		

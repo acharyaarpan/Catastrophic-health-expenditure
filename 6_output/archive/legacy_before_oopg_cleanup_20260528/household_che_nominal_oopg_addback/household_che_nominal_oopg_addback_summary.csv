@@ -1,0 +1,13 @@
+unit,weight,scope,denominator,threshold,convention,che_variable,overshoot_variable,prevalence,prevalence_se,overshoot,overshoot_se,mpo
+household,hhs_wt,oopg,total,.05,nom_oopg_addback,hche_oopg_tot5_nom_oopgadd,hover_oopg_tot5_nom_oopgadd,.1506227023066058,.0067415861,.013679158,.00079278229,.090817377
+household,hhs_wt,oopg,total,.1,nom_oopg_addback,hche_oopg_tot10_nom_oopgadd,hover_oopg_tot10_nom_oopgadd,.0739960321624281,.004081958,.008397284,.00059630041,.11348289
+household,hhs_wt,oopg,total,.15,nom_oopg_addback,hche_oopg_tot15_nom_oopgadd,hover_oopg_tot15_nom_oopgadd,.0410076002322276,.0027784235,.0056325691,.00047359042,.13735427
+household,hhs_wt,oopg,total,.2,nom_oopg_addback,hche_oopg_tot20_nom_oopgadd,hover_oopg_tot20_nom_oopgadd,.0266078580771431,.0022268905,.0039854194,.00038534767,.14978354
+household,hhs_wt,oopg,total,.25,nom_oopg_addback,hche_oopg_tot25_nom_oopgadd,hover_oopg_tot25_nom_oopgadd,.0176489090132706,.0016377306,.0028957978,.00031593189,.16407801
+household,hhs_wt,oopg,total,.4,nom_oopg_addback,hche_oopg_tot40_nom_oopgadd,hover_oopg_tot40_nom_oopgadd,.0079091793942835,.0010002743,.0010935433,.00017010639,.13826254
+household,hhs_wt,oop,total,.05,nom_oopg_addback,hche_oop_tot5_nom_oopgadd,hover_oop_tot5_nom_oopgadd,.3268383454499506,.0093964385,.043490894,.0021971962,.13306545
+household,hhs_wt,oop,total,.1,nom_oopg_addback,hche_oop_tot10_nom_oopgadd,hover_oop_tot10_nom_oopgadd,.1847377266789791,.0063513429,.031229684,.0019636427,.16904876
+household,hhs_wt,oop,total,.15,nom_oopg_addback,hche_oop_tot15_nom_oopgadd,hover_oop_tot15_nom_oopgadd,.1144727829743497,.0054182392,.023912853,.0017981225,.20889553
+household,hhs_wt,oop,total,.2,nom_oopg_addback,hche_oop_tot20_nom_oopgadd,hover_oop_tot20_nom_oopgadd,.0780286069763674,.0041666613,.019150695,.0016526564,.24543172
+household,hhs_wt,oop,total,.25,nom_oopg_addback,hche_oop_tot25_nom_oopgadd,hover_oop_tot25_nom_oopgadd,.0563272021470489,.0032822357,.015842579,.0015408637,.28125983
+household,hhs_wt,oop,total,.4,nom_oopg_addback,hche_oop_tot40_nom_oopgadd,hover_oop_tot40_nom_oopgadd,.0277553625980002,.0021339476,.0099326186,.0013166022,.35786304

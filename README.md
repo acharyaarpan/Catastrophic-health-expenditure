@@ -1,103 +1,189 @@
-# Catastrophic Health Expenditure — NLSS IV
+# OOPG Catastrophic Health Expenditure in Nepal
 
-Analysis of catastrophic health expenditure (CHE) using the Nepal Living Standards Survey IV (NLSS IV) data. This project examines out-of-pocket health spending relative to household consumption and identifies determinants of CHE through survey-weighted logistic regression.
+This project prepares an OOPG-focused catastrophic health expenditure (CHE)
+manuscript using Nepal Living Standards Survey IV (NLSS IV, 2022/23).
 
-## Overview
+`oopg` means Section 8(B) communicable disease or injury out-of-pocket spending
+reported over the past 30 days. Earlier drafts used `ghe` for this subset.
+Renamed to `oopg` to avoid confusion with General Government Health Expenditure
+(NHA usage).
 
-Catastrophic health expenditure occurs when a household's out-of-pocket health spending exceeds a defined threshold of its consumption. We use two thresholds (10% and 20% of monthly consumption) and two expenditure scopes (communicable disease only, and communicable + NCD combined), yielding four CHE outcome variables.
+The active project is now OOPG-only. Older combined-OOP, regression,
+audit-workbook, individual-level, Word-draft, and Pen's Parade experiments are
+archived and are not part of the current manuscript workflow.
 
-**Key findings:**
-- 8.3% of households experience CHE from communicable disease spending alone (>10% threshold)
-- 19.3% experience CHE when NCD costs are included
-- Significant determinants include household size, presence of elderly/young children, disability status, outstanding loans, caste/ethnicity, and remittance receipt
+## Folder Structure
 
-## Directory Structure
-
-```
+```text
 consumption/
-├── 0_master.do              # Master do-file (globals, package checks, run sequence)
-├── 2_prep/
-│   └── 1_catastrophic.do    # Data preparation: merge 8 raw datasets → analysis dataset
-├── 3_analysis/
-│   ├── 0_descriptive.do     # Weighted descriptive statistics (Table 1)
-│   └── 1_logit_che.do       # Survey-weighted logistic regression (4 models)
-├── 6_output/
-│   ├── che_results.tex       # Combined LaTeX tables (descriptive + logit)
-│   ├── descriptive_table.tex # Descriptive statistics (Table 1)
-│   └── logit_results.tex     # Logistic regression odds ratios (Table 2)
-└── README.md
+|-- 0_master.do
+|-- 1_data/
+|   |-- 1_raw/                 raw NLSS files
+|   |-- 2_clean/               active clean dataset
+|   `-- archive/               older derived datasets
+|-- 2_prep/
+|   `-- 1_catastrophic.do      builds the OOPG base dataset
+|-- 3_analysis/
+|   |-- 01_oopg_che_analysis.do
+|   `-- 02_build_oopg_manuscript.py
+|-- 4_log/
+|-- 5_documentation/
+|-- 6_output/
+|   |-- main_output/
+|   |   `-- manuscript/
+|   `-- archive/
+`-- 0_archive/
 ```
 
-## Data
+## Active Data
 
-The analysis uses NLSS IV microdata (not included in this repository). The raw data files are:
+Raw NLSS IV files should be placed in:
 
-| File | Section | Description | Level |
-|------|---------|-------------|-------|
-| `poverty.dta` | — | Poverty indicators, province, welfare quintiles | Household (9,600) |
-| `total_consumption.dta` | — | Total annual household consumption | Household (9,600) |
-| `S01.dta` | Section 1 | Demographics: age, sex, caste/ethnicity | Individual (46,870) |
-| `S02.dta` | Section 2 | Housing: toilet, water, cooking fuel | Household (9,600) |
-| `S07.dta` | Section 7 | Education: literacy, school attendance, grade | Individual (46,870) |
-| `S08.dta` | Section 8 | Health: NCDs, communicable disease, costs, disability | Individual (46,870) |
-| `S13.dta` | Section 13 | Credit/savings: loans outstanding | Household (9,600) |
-| `S14A.dta` | Section 14A | Absentee details: remittance receipt | Individual (8,769) |
-| `S15.dta` | Section 15 | Other remittances: transfers from non-members | Household (9,600) |
-
-The preparation script (`1_catastrophic.do`) merges these into a single household-level dataset of **9,600 households × 57 variables**.
-
-## Methodology
-
-### CHE Definition
-
-- **Monthly consumption** = total annual consumption / 12
-- **Combined health expenditure** = communicable (30-day) + NCD monthly estimate (annual / 12)
-- **10% threshold**: Standard WHO/World Bank definition
-- **20% threshold**: Stricter threshold from the literature
-
-### Adult Equivalence Scale
-
-Per capita consumption is adjusted using the Citro-Michael / NRC scale:
-
-```
-AE = (A + 0.5 × K)^0.75
+```text
+1_data/1_raw/
 ```
 
-where A = adults (age ≥ 15), K = children (age < 15).
+The preparation script creates one active household-level benchmark dataset:
 
-### Regression Specification
+```text
+1_data/2_clean/oopg_analysis_base.dta
+```
 
-Survey-weighted logistic regression (`svy: logit`) with PSU clustering and household probability weights. Covariates include:
+This dataset keeps the OOPG variables, reconstructed consumption denominators,
+adult-equivalence variables, poverty variables, weights, and basic household
+covariates needed for the current manuscript.
 
-- **Head & household**: age, household size, female head, literacy
-- **Vulnerability**: elderly member, child under 5, disability
-- **Living standards**: improved sanitation, improved water, clean cooking fuel
-- **Economic**: remittance receipt, outstanding loan, poverty status
-- **Categorical**: education (7 levels), caste/ethnicity (8 groups), area type (3), province (7)
+## Active Analysis
 
-### Key Analytical Decisions
+Run the Stata pipeline from the project root:
 
-1. Health costs aggregated from individual to household level; missing costs treated as zero
-2. Head education sourced from S07.dta (own education), not S01 q01_12 (father's education)
-3. Disability measured via Washington Group questions (6 functional domains)
-4. Remittance combines absentee remittance (S14A q14_15) and non-member transfers (S15 q15_11)
-5. No health insurance variable exists in NLSS IV (q02_34/q02_35 in S02 are firewood questions)
+```stata
+do 0_master.do
+```
+
+This runs:
+
+```text
+2_prep/1_catastrophic.do
+3_analysis/01_oopg_che_analysis.do
+```
+
+Then build the LaTeX manuscript source and figure:
+
+```powershell
+python 3_analysis\02_build_oopg_manuscript.py
+```
+
+Compile from:
+
+```text
+6_output/main_output/manuscript/code/oopg_che_manuscript.tex
+```
+
+using:
+
+```powershell
+pdflatex oopg_che_manuscript.tex
+bibtex oopg_che_manuscript
+pdflatex oopg_che_manuscript.tex
+pdflatex oopg_che_manuscript.tex
+```
+
+## Active Outputs
+
+```text
+6_output/main_output/manuscript/
+|-- oopg_che_manuscript.pdf
+|-- code/
+|   |-- oopg_che_manuscript.tex
+|   `-- references.bib
+|-- pictures/
+|   `-- oopg_budget_share_curve.png
+`-- tables/
+    |-- oopg_incidence_intensity.csv
+    |-- oopg_distribution_sensitive.csv
+    |-- oopg_ctp_summary.csv
+    |-- oopg_ctp_equity.csv
+    |-- oopg_poverty_impact.csv
+    |-- oopg_method_parameters.csv
+    `-- oopg_budget_share_curve_data.csv
+```
+
+## Methods Summary
+
+The manuscript uses three OOPG denominator approaches.
+
+Total-expenditure CHE:
+
+```text
+oopg / (nominal_total_cons_month + oopg)
+```
+
+Nonfood CHE:
+
+```text
+oopg_real / (pcep_nonfood * hhsize / 12 + oopg_real)
+```
+
+Adult-equivalence capacity-to-pay CHE:
+
+```text
+E = (A + 0.5K)^0.75
+food_nom_mo = pcep_food * paasche * hhsize / 12
+x_oopg_mo = nominal_total_cons_month + oopg
+food_share = food_nom_mo / x_oopg_mo
+food_equiv = food_nom_mo / E
+subsistence_line = weighted mean(food_equiv among 45th-55th food-share households)
+subsistence_hh = subsistence_line * E
+ctp_ae = x_oopg_mo - subsistence_hh if food_nom_mo >= subsistence_hh
+ctp_ae = x_oopg_mo - food_nom_mo otherwise
+oopg_sh_ctp_ae = oopg / ctp_ae
+```
+
+Adult equivalence is used in the capacity-to-pay approach because it adjusts
+the subsistence requirement for household composition. It is not used in the
+simple OOPG/total-consumption share because dividing both the numerator and
+denominator by the same equivalence scale would cancel, while dividing only the
+denominator would mix household-level payments with per-equivalent-adult
+resources.
+
+## Poverty Method
+
+NLSS IV official welfare excludes health spending. The paper therefore uses:
+
+```text
+post-payment welfare = pcep
+pre-OOPG welfare     = pcep + oopg_pc_ann_real
+```
+
+Official poverty is:
+
+```text
+pcep < pline
+```
+
+with individual weights. The active validation target is 20.27%. Health
+payments are never subtracted from `pcep`.
 
 ## Requirements
 
-- **Stata 17+** with `estout` and `texify` packages
-- Set your workspace path in `0_master.do` under the username conditionals
+- Stata 17 or newer
+- Python packages: `pandas`, `numpy`, `matplotlib`
+- MiKTeX or another LaTeX distribution with `pdflatex` and `bibtex`
 
-## How to Run
+## Validation Checks
 
-1. Place raw `.dta` files in `1_data/1_raw/`
-2. Edit `0_master.do` to add your username and workspace path
-3. Run `0_master.do` in Stata — it calls all scripts in sequence
+The active scripts check that:
+
+- the cleaned dataset has 9,600 households
+- `pcep < pline`, individual-weighted, reproduces 20.27%
+- `pcep` equals `pcep_food + pcep_nonfood` within 1 NPR
+- `oopg >= 0`
+- `adult_equiv > 0`
+- OOPG-addback total and nonfood denominators are positive
+- `pre_oopg >= pcep`
+- adult-equivalence CTP threshold indicators are monotonic
 
 ## Author
 
 Arpan Acharya
-
-## License
-
-This project is for academic research purposes. The NLSS IV data is property of the National Statistics Office, Nepal.

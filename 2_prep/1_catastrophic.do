@@ -19,8 +19,8 @@
         - Run 0_master.do before this file
 
     Output:
-        - catastrophic_health_exp.dta (in $data_clean)
-          9,600 households, 56 variables
+        - oopg_analysis_base.dta (in $data_clean)
+          9,600 households, analysis-ready OOPG variables
 */
 *------------------------------------------------------------------------------*
 
@@ -35,9 +35,6 @@ local dofilename "1_catastrophic"
 *==============================================================================*
 
 use "$data_raw/poverty.dta", clear
-
-* Drop per-capita expenditure from poverty (we use total_consumption.dta instead)
-drop pcep pcep_food pcep_nonfood paasche
 
 * Merge total consumption
 merge 1:1 psu_number hh_number using "$data_raw/total_consumption.dta", ///
@@ -67,6 +64,10 @@ label variable quintile_pcep       "Per capita expenditure quintile (1=poorest t
 label variable cons_quintile       "Consumption quintile"
 label variable total_consumption   "Total annual household consumption (NPR)"
 label variable pctot_consumption   "Per capita total consumption, simple (NPR)"
+label variable pcep                "Official real per-capita consumption (NPR/year, excludes health)"
+label variable pcep_food           "Real per-capita food consumption (NPR/year)"
+label variable pcep_nonfood        "Real per-capita nonfood consumption (NPR/year)"
+label variable paasche             "Household Paasche price index"
 
 tempfile master
 save `master'
@@ -406,40 +407,145 @@ label variable pc_cons_ae "Per capita consumption, adult-equivalent adjusted (NP
 
 *==============================================================================*
 *                                                                              *
-*     SECTION 7: CHE DUMMY VARIABLES                                           *
+*     SECTION 7: OOPG EXPENDITURE, SHARES, CHE FLAGS, OVERSHOOT                *
 *                                                                              *
 *==============================================================================*
 /*
-    Monthly consumption = total_consumption / 12
-    Communicable health exp = hh_comm_total_30d (past 30 days)
-    Combined health exp = communicable + NCD monthly estimate
+    Canonical scope:
+        oopg = Section 8B communicable/injury OOP, past 30 days; treated
+               as monthly for CHE
 
-    Thresholds:
-        10% of monthly consumption (standard WHO/World Bank threshold)
-        20% of monthly consumption (stricter threshold)
+    Primary CHE total-expenditure denominators now follow the project decision
+    to reconstruct nominal monthly household total consumption from the
+    official real welfare components and add back only OOPG/general health
+    expenditure:
+        nominal_total_cons_month + oopg
+
+    The nonfood/capacity-to-pay denominator uses the analogous OOPG-only
+    addback in real terms:
+        pcep_nonfood * hhsize / 12 + oopg_real
+
+    NLSS-style health-excluding shares are retained with suffix _nlss for
+    sensitivity only.
 */
 
-gen monthly_cons = total_consumption / 12
-gen combined_health_monthly = hh_comm_total_30d + hh_ncd_total_monthly
+gen double oopg = hh_comm_total_30d
+gen double oopg_ann = oopg * 12
 
-* Dummy 1: Communicable only > 10% monthly consumption
-gen che_comm_100 = (hh_comm_total_30d > 0.10 * monthly_cons)
-label variable che_comm_100 "CHE dummy: communicable exp > 10% monthly consumption"
+gen double oopg_pc_ann_real = (oopg_ann / hhsize) / paasche
 
-* Dummy 2: Communicable + NCD combined > 10% monthly consumption
-gen che_combined_100 = (combined_health_monthly > 0.10 * monthly_cons)
-label variable che_combined_100 "CHE dummy: communicable+NCD exp > 10% monthly consumption"
+gen double total_cons_mo = total_consumption / 12
+gen double nf_cons_mo_real = pcep_nonfood * hhsize / 12
 
-* Dummy 3: Communicable only > 20% monthly consumption
-gen che_comm_20 = (hh_comm_total_30d > 0.20 * monthly_cons)
-label variable che_comm_20 "CHE dummy: communicable exp > 20% monthly consumption"
+gen double nonfood_spatial_index = .
+replace nonfood_spatial_index = 1.03 if domain == 11
+replace nonfood_spatial_index = 0.61 if domain == 12
+replace nonfood_spatial_index = 0.60 if domain == 21
+replace nonfood_spatial_index = 0.52 if domain == 22
+replace nonfood_spatial_index = 2.32 if domain == 30
+replace nonfood_spatial_index = 1.15 if domain == 31
+replace nonfood_spatial_index = 0.72 if domain == 32
+replace nonfood_spatial_index = 1.32 if domain == 41
+replace nonfood_spatial_index = 0.66 if domain == 42
+replace nonfood_spatial_index = 1.08 if domain == 51
+replace nonfood_spatial_index = 0.74 if domain == 52
+replace nonfood_spatial_index = 0.78 if domain == 61
+replace nonfood_spatial_index = 0.60 if domain == 62
+replace nonfood_spatial_index = 0.97 if domain == 71
+replace nonfood_spatial_index = 0.68 if domain == 72
 
-* Dummy 4: Communicable + NCD combined > 20% monthly consumption
-gen che_combined_20 = (combined_health_monthly > 0.20 * monthly_cons)
-label variable che_combined_20 "CHE dummy: communicable+NCD exp > 20% monthly consumption"
+gen double nominal_pcexp_annual = (pcep_food * paasche) + ///
+    (pcep_nonfood * nonfood_spatial_index)
+gen double nominal_pcexp_month = nominal_pcexp_annual / 12
+gen double nominal_total_cons_annual = nominal_pcexp_annual * hhsize
+gen double nominal_total_cons_month = nominal_total_cons_annual / 12
 
-* Drop intermediate variables
-drop monthly_cons combined_health_monthly
+gen double oopg_real = oopg / paasche
+
+gen double tot_real_hh_mo = pcep * hhsize / 12
+gen double nf_real_hh_mo  = pcep_nonfood * hhsize / 12
+
+gen double totexp_nom_oopgadd_mo = nominal_total_cons_month + oopg
+gen double ctp_real_oopgadd_hh_mo = nf_real_hh_mo + oopg_real
+
+gen double oopg_sh_tot = oopg / totexp_nom_oopgadd_mo
+gen double oopg_sh_nf  = oopg_real / ctp_real_oopgadd_hh_mo
+
+gen double oopg_sh_tot_nlss = oopg_real / tot_real_hh_mo
+gen double oopg_sh_nf_nlss  = oopg_real / nf_real_hh_mo
+
+gen byte che_oopg_tot10 = oopg_sh_tot > 0.10 if !missing(oopg_sh_tot)
+gen byte che_oopg_tot20 = oopg_sh_tot > 0.20 if !missing(oopg_sh_tot)
+gen byte che_oopg_nf25  = oopg_sh_nf  > 0.25 if !missing(oopg_sh_nf)
+gen byte che_oopg_nf40  = oopg_sh_nf  > 0.40 if !missing(oopg_sh_nf)
+
+gen byte che_oopg_tot10_nlss = oopg_sh_tot_nlss > 0.10 if !missing(oopg_sh_tot_nlss)
+gen byte che_oopg_tot20_nlss = oopg_sh_tot_nlss > 0.20 if !missing(oopg_sh_tot_nlss)
+gen byte che_oopg_nf25_nlss  = oopg_sh_nf_nlss  > 0.25 if !missing(oopg_sh_nf_nlss)
+gen byte che_oopg_nf40_nlss  = oopg_sh_nf_nlss  > 0.40 if !missing(oopg_sh_nf_nlss)
+
+gen double over_oopg_tot10 = max(oopg_sh_tot - 0.10, 0)
+gen double over_oopg_tot20 = max(oopg_sh_tot - 0.20, 0)
+gen double over_oopg_nf25  = max(oopg_sh_nf  - 0.25, 0)
+gen double over_oopg_nf40  = max(oopg_sh_nf  - 0.40, 0)
+
+gen double pre_oopg = pcep + oopg_pc_ann_real
+
+label variable oopg                  "OOPG: communicable/injury OOP, monthly HH amount (NPR)"
+label variable oopg_ann              "OOPG: annualized HH amount (NPR)"
+label variable oopg_pc_ann_real      "OOPG: real annual per-capita amount (NPR)"
+label variable total_cons_mo         "Official total monthly household consumption, nominal (NPR)"
+label variable nf_cons_mo_real       "Nonfood monthly household consumption, real (NPR)"
+label variable nonfood_spatial_index "Domain nonfood spatial price index"
+label variable nominal_pcexp_annual  "Reconstructed nominal annual per-capita consumption (NPR)"
+label variable nominal_pcexp_month   "Reconstructed nominal monthly per-capita consumption (NPR)"
+label variable nominal_total_cons_annual "Reconstructed nominal annual household consumption (NPR)"
+label variable nominal_total_cons_month "Reconstructed nominal monthly household consumption (NPR)"
+label variable oopg_real             "OOPG: real monthly household amount (NPR)"
+label variable tot_real_hh_mo        "Real monthly household total consumption, excludes health (NPR)"
+label variable nf_real_hh_mo         "Real monthly household nonfood consumption, excludes health (NPR)"
+label variable totexp_nom_oopgadd_mo "Primary total denominator: reconstructed nominal monthly consumption plus OOPG (NPR)"
+label variable ctp_real_oopgadd_hh_mo "Primary nonfood denominator: real monthly nonfood plus OOPG (NPR)"
+label variable oopg_sh_tot           "OOPG share of reconstructed nominal total consumption plus OOPG"
+label variable oopg_sh_nf            "OOPG share of real nonfood consumption plus OOPG"
+label variable oopg_sh_tot_nlss      "OOPG share of NLSS total consumption excl. health"
+label variable oopg_sh_nf_nlss       "OOPG share of NLSS nonfood consumption excl. health"
+label variable che_oopg_tot10        "CHE: OOPG > 10% reconstructed nominal total consumption plus OOPG"
+label variable che_oopg_tot20        "CHE: OOPG > 20% reconstructed nominal total consumption plus OOPG"
+label variable che_oopg_nf25         "CHE: OOPG > 25% real nonfood consumption plus OOPG"
+label variable che_oopg_nf40         "CHE: OOPG > 40% real nonfood consumption plus OOPG"
+label variable che_oopg_tot10_nlss   "Sensitivity CHE: OOPG > 10% NLSS total consumption"
+label variable che_oopg_tot20_nlss   "Sensitivity CHE: OOPG > 20% NLSS total consumption"
+label variable che_oopg_nf25_nlss    "Sensitivity CHE: OOPG > 25% NLSS nonfood consumption"
+label variable che_oopg_nf40_nlss    "Sensitivity CHE: OOPG > 40% NLSS nonfood consumption"
+label variable over_oopg_tot10       "Overshoot: OOPG above 10% reconstructed nominal total consumption plus OOPG"
+label variable over_oopg_tot20       "Overshoot: OOPG above 20% reconstructed nominal total consumption plus OOPG"
+label variable over_oopg_nf25        "Overshoot: OOPG above 25% real nonfood consumption plus OOPG"
+label variable over_oopg_nf40        "Overshoot: OOPG above 40% real nonfood consumption plus OOPG"
+label variable pre_oopg              "Pre-OOPG real per-capita consumption (NPR/year)"
+
+* Validation checks for the analysis dataset.
+assert _N == 9600
+assert total_consumption > 0
+assert abs(pcep - (pcep_food + pcep_nonfood)) < 1
+assert pcep_nonfood > 0
+assert paasche > 0
+assert nonfood_spatial_index < .
+assert nominal_total_cons_month > 0
+assert totexp_nom_oopgadd_mo > 0
+assert ctp_real_oopgadd_hh_mo > 0
+gen byte _poor_pcep_check = (pcep < pline) if !missing(pcep, pline)
+svyset psu_number [pw = ind_wt]
+quietly svy: mean _poor_pcep_check
+assert abs(_b[_poor_pcep_check] - 0.2027) < 0.0005
+drop _poor_pcep_check
+assert che_oopg_tot20 <= che_oopg_tot10 if !missing(che_oopg_tot20, che_oopg_tot10)
+assert che_oopg_nf40  <= che_oopg_nf25  if !missing(che_oopg_nf40,  che_oopg_nf25)
+foreach spec in oopg_tot10 oopg_tot20 oopg_nf25 oopg_nf40 {
+    assert (over_`spec' == 0) == (che_`spec' == 0) ///
+        if !missing(over_`spec', che_`spec')
+}
+assert pre_oopg >= pcep if !missing(pre_oopg, pcep)
 
 
 *==============================================================================*
@@ -466,7 +572,7 @@ tab has_elderly
 tab has_under5
 
 di _n "--- Health ---"
-su hh_comm_total_30d hh_ncd_total_annual, detail
+su oopg hh_comm_total_30d, detail
 tab has_disabled_member
 
 di _n "--- Housing & Sanitation ---"
@@ -479,18 +585,52 @@ tab receives_remittance
 tab has_loan
 tab poor
 
-di _n "--- CHE Dummies ---"
-foreach v in che_comm_100 che_combined_100 che_comm_20 che_combined_20 {
+di _n "--- CHE Dummies: Total Consumption Denominator ---"
+foreach v in che_oopg_tot10 che_oopg_tot20 {
     count if `v' == 1
     di "`v': " r(N) " HHs (" %5.2f r(N)/9600*100 "%)"
 }
 
+di _n "--- CHE Dummies: Nonfood Denominator ---"
+foreach v in che_oopg_nf25 che_oopg_nf40 {
+    count if `v' == 1
+    di "`v': " r(N) " HHs (" %5.2f r(N)/9600*100 "%)"
+}
+
+* Keep one active OOPG benchmark dataset for the current manuscript.
+keep psu_number hh_number prov domain ad_4 hhsize hhs_wt ind_wt ///
+    pline fpline nfpline poor quintile_pcep cons_quintile ///
+    pcep pcep_food pcep_nonfood paasche total_consumption pctot_consumption ///
+    head_sex head_age head_female head_marital head_education ///
+    head_edu_level head_literate caste_ethnicity ///
+    n_adults n_children n_hh_members adult_equiv n_elderly n_under5 ///
+    n_working_age dep_ratio has_elderly has_under5 ///
+    hh_comm_total_30d n_with_communicable n_disabled has_disabled_member ///
+    improved_sanitation improved_water clean_fuel receives_remittance has_loan ///
+    total_cons_mo nf_cons_mo_real nonfood_spatial_index ///
+    nominal_pcexp_annual nominal_pcexp_month ///
+    nominal_total_cons_annual nominal_total_cons_month ///
+    oopg oopg_ann oopg_pc_ann_real oopg_real ///
+    tot_real_hh_mo nf_real_hh_mo totexp_nom_oopgadd_mo ///
+    ctp_real_oopgadd_hh_mo oopg_sh_tot oopg_sh_nf ///
+    oopg_sh_tot_nlss oopg_sh_nf_nlss ///
+    che_oopg_tot10 che_oopg_tot20 che_oopg_nf25 che_oopg_nf40 ///
+    che_oopg_tot10_nlss che_oopg_tot20_nlss ///
+    che_oopg_nf25_nlss che_oopg_nf40_nlss ///
+    over_oopg_tot10 over_oopg_tot20 over_oopg_nf25 over_oopg_nf40 ///
+    pre_oopg
+
+order psu_number hh_number prov domain ad_4 hhsize hhs_wt ind_wt ///
+    pcep pcep_food pcep_nonfood paasche pline oopg oopg_real ///
+    nominal_total_cons_month totexp_nom_oopgadd_mo ctp_real_oopgadd_hh_mo ///
+    oopg_sh_tot oopg_sh_nf adult_equiv pre_oopg
+
 * Save
 compress
-save "$data_clean/catastrophic_health_exp.dta", replace
+save "$data_clean/oopg_analysis_base.dta", replace
 
 di _n "{hline 60}"
-di "Saved: catastrophic_health_exp.dta"
+di "Saved: oopg_analysis_base.dta"
 di "Observations: " _N "  |  Variables: " c(k)
 di "{hline 60}"
 

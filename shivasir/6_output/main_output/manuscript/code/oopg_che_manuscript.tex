@@ -1,0 +1,229 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{threeparttable}
+\usepackage[round]{natbib}
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\captionsetup{font=small,labelfont=bf}
+
+\title{Catastrophic General Health Out-of-Pocket Expenditure in Nepal: No-Addback OOPG Analysis}
+\author{Authors' calculations from Nepal Living Standards Survey IV}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This draft examines catastrophic out-of-pocket spending for general health events in Nepal using NLSS IV. The analysis focuses on OOPG, defined as communicable disease or injury spending reported in Section 8(B). We present three complementary denominators: total household expenditure, nonfood expenditure, and adult-equivalence-adjusted capacity to pay. In this rerun, OOPG is not added back to the consumption denominators used for CHE or CTP.
+\end{abstract}
+
+\section{Introduction}
+
+Financial protection is a central objective of health systems because health payments can force households to sacrifice other consumption, borrow, sell assets, or fall into poverty. Catastrophic health expenditure (CHE) measures this burden by comparing out-of-pocket payments with household resources. This paper focuses on OOPG, a measure of general health out-of-pocket spending related to communicable disease or injury. This scope is useful because it is directly observed over a recent 30-day recall period in NLSS IV and allows a focused assessment of acute health-payment burden.
+
+The analysis follows the catastrophic-payment tradition in \citet{odonnell2008} and \citet{wagstaff2003}, while also drawing on the WHO/Xu capacity-to-pay approach \citep{xu2003,xu2005}. The total-expenditure measure is retained because it is transparent and comparable with the SDG 3.8.2 convention, which monitors health spending above 10\% or 25\% of household consumption or income \citep{who2026sdg382}. The capacity-to-pay extension is added because total expenditure may not represent discretionary resources equally across households with different subsistence needs.
+
+\section{Data and OOPG Measure}
+
+The data are from Nepal Living Standards Survey IV. OOPG is constructed by summing individual Section 8(B) payments for communicable disease or injury to the household level. The household is the analytical unit because catastrophic expenditure is a budget event: the payment may originate with one member, but the financial burden is absorbed by the household.
+
+NLSS welfare aggregates exclude health spending by construction. For this no-addback rerun, nominal household consumption is reconstructed from official food and nonfood welfare components and used directly as the total-expenditure CHE denominator. This follows the requested specification in which OOPG remains only in the numerator.
+
+\section{Methods}
+
+\subsection{Total-expenditure CHE}
+
+Let $T_i$ denote household OOPG and $x_i$ denote reconstructed monthly nominal household consumption without OOPG addback. The total-expenditure share is
+\begin{equation}
+s_i^T = \frac{T_i}{x_i}, \qquad x_i = \text{nominal consumption}_i.
+\end{equation}
+A household is catastrophic at threshold $z$ if $s_i^T > z$. We report multiple thresholds, with the 10\% threshold emphasized for interpretation and comparability.
+
+\subsection{Nonfood CHE}
+
+The second specification uses nonfood expenditure as a practical ability-to-pay proxy, following the Chapter 18 framework in \citet{odonnell2008}. Let $c_i^{NF}$ denote real monthly nonfood consumption without OOPG addback. The nonfood share is
+\begin{equation}
+s_i^{NF} = \frac{T_i^r}{c_i^{NF}},
+\end{equation}
+where $T_i^r$ is real monthly OOPG. This denominator is narrower than total expenditure and therefore gives a stricter view of financial stress.
+
+\subsection{Adult-equivalence capacity to pay}
+
+The third specification follows the logic of the WHO/Xu capacity-to-pay method \citep{xu2003,xu2005}. Adult equivalence is used only here because it is a way of estimating household subsistence needs, not a way of rescaling the health bill. If both OOPG and total consumption were divided by the same equivalence scale, the scale would cancel: $(T_i/E_i)/(x_i/E_i)=T_i/x_i$. Comparing household OOPG with consumption per adult equivalent would mix units by placing a household-level payment over a one-adult-equivalent denominator.
+
+Adult equivalence therefore enters through subsistence expenditure. We use the project scale
+\begin{equation}
+E_i = (A_i + 0.5K_i)^{0.75},
+\end{equation}
+where $A_i$ is the number of adults aged 15 years or older and $K_i$ is the number of children below age 15. Food expenditure per adult equivalent is computed as
+\begin{equation}
+f_i^e = \frac{f_i}{E_i}.
+\end{equation}
+The subsistence line is the household-weighted mean of $f_i^e$ among households in the 45th--55th percentiles of the no-addback food-share distribution. In this analysis, that line is NPR 7,894 per adult equivalent per month. Household subsistence expenditure is this line multiplied by $E_i$. Capacity to pay is then
+\begin{equation}
+C_i =
+\begin{cases}
+x_i - subs_i, & \text{if } f_i \ge subs_i, \\
+x_i - f_i, & \text{if } f_i < subs_i.
+\end{cases}
+\end{equation}
+The CTP catastrophic share is $T_i/C_i$. This approach follows the role of equivalence scales described by \citet{koch2018}: equivalence affects the poverty line, subsistence expenditure, and capacity to pay, not the OOP numerator itself.
+
+\subsection{Equity and impoverishment measures}
+
+For each denominator, we report headcount, overshoot, and mean positive overshoot. Distribution-sensitive measures use concentration indices and rank-weighted headcounts/overshoots. Because this no-addback rerun treats OOPG as already included in observed consumption, households are ranked by pre-OOPG welfare, defined as monthly official real per-capita consumption, $pcep/12$. Impoverishment is calculated by comparing this pre-OOPG welfare with post-OOPG welfare after subtracting monthly real per-capita OOPG, defined as household monthly OOPG divided by household size and deflated by the Paasche index. Post-OOPG welfare is floored at zero; 42 households required this floor because raw subtraction was negative.
+
+\section{Results}
+
+\begin{table}[!htbp]
+\centering
+\begin{threeparttable}
+\caption{Incidence and intensity of catastrophic OOPG payments}
+\label{tab:incidence}
+\small
+\begin{tabular}{lccccc}
+\toprule
+Measure & 5\% & 10\% & 15\% & 25\% & 40\% \\
+\midrule
+\multicolumn{6}{l}{\textit{OOPG as a share of total expenditure}} \\
+Headcount & 15.83\% & 8.39\% & 5.12\% & 2.66\% & 1.47\% \\
+Standard error & 0.69\% & 0.44\% & 0.32\% & 0.22\% & 0.15\% \\
+Overshoot & 2.45\% & 1.88\% & 1.56\% & 1.19\% & 0.91\% \\
+Mean positive overshoot & 15.48\% & 22.42\% & 30.39\% & 44.90\% & 61.51\% \\
+\addlinespace
+\multicolumn{6}{l}{\textit{OOPG as a share of nonfood expenditure}} \\
+Headcount & -- & -- & 11.45\% & 6.77\% & 4.12\% \\
+Standard error & -- & -- & 0.57\% & 0.39\% & 0.28\% \\
+Overshoot & -- & -- & 5.34\% & 4.46\% & 3.67\% \\
+Mean positive overshoot & -- & -- & 46.61\% & 65.82\% & 89.17\% \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item Notes: Estimates use household survey weights. OOPG is Section 8(B) communicable disease or injury out-of-pocket spending. The total-expenditure denominator is reconstructed nominal monthly consumption without adding OOPG back.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+At the 10\% total-expenditure threshold, 8.39\% of households incurred catastrophic OOPG spending. The associated mean positive overshoot was 22.42\%, indicating that households crossing the threshold were not merely marginally above it. Under the 40\% nonfood threshold, the headcount was 4.12\%, reflecting a stricter ability-to-pay interpretation.
+
+\begin{table}[!htbp]
+\centering
+\begin{threeparttable}
+\caption{Adult-equivalence capacity-to-pay catastrophic OOPG payments}
+\label{tab:ctp}
+\small
+\begin{tabular}{lccc}
+\toprule
+Measure & 10\% CTP & 25\% CTP & 40\% CTP \\
+\midrule
+Headcount & 16.52\% & 6.88\% & 4.06\% \\
+Standard error & 0.77\% & 0.41\% & 0.29\% \\
+Overshoot & 6.06\% & 4.47\% & 3.68\% \\
+Mean positive overshoot & 36.71\% & 64.94\% & 90.53\% \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item Notes: Capacity to pay is reconstructed nominal consumption without OOPG addback less adult-equivalence-adjusted subsistence expenditure, except when observed food expenditure is below subsistence, in which case observed food expenditure is subtracted. Estimates use household survey weights.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+Table~\ref{tab:ctp} applies the adult-equivalence capacity-to-pay denominator. At the 10\% threshold, 16.52\% of households crossed the CTP line; this should be read as a lower-threshold financial-stress indicator, because even one-tenth of capacity to pay can be consequential once subsistence needs are protected. The 25\% and 40\% thresholds are stricter: 6.88\% and 4.06\% of households crossed them, respectively. These estimates should be read alongside, not instead of, the total-expenditure estimate. They ask a different welfare question: how large is OOPG after protecting basic subsistence needs?
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.86\textwidth]{../pictures/oopg_budget_share_curve.png}
+\caption{OOPG budget-share curve}
+\label{fig:budgetshare}
+\end{figure}
+
+Figure~\ref{fig:budgetshare} shows the distribution of OOPG budget shares. The left tail identifies households for which OOPG absorbs a particularly large share of resources, while the flatter portion of the curve shows that most households have relatively low OOPG shares.
+
+\begin{table}[!htbp]
+\centering
+\begin{threeparttable}
+\caption{Distribution-sensitive OOPG catastrophic-payment measures}
+\label{tab:distribution}
+\small
+\begin{tabular}{lccccc}
+\toprule
+Measure & 5\% & 10\% & 15\% & 25\% & 40\% \\
+\midrule
+\multicolumn{6}{l}{\textit{OOPG as a share of total expenditure}} \\
+Concentration index, $C^H$ & -0.1606 & -0.1850 & -0.2005 & -0.2400 & -0.2221 \\
+Rank-weighted headcount, $H^W$ & 18.37\% & 9.95\% & 6.15\% & 3.30\% & 1.80\% \\
+Concentration index, $C^O$ & -0.1936 & -0.1996 & -0.2014 & -0.1952 & -0.1843 \\
+Rank-weighted overshoot, $O^W$ & 2.92\% & 2.26\% & 1.87\% & 1.43\% & 1.07\% \\
+\addlinespace
+\multicolumn{6}{l}{\textit{OOPG as a share of nonfood expenditure}} \\
+Concentration index, $C^H$ & -- & -- & -0.2118 & -0.2268 & -0.2343 \\
+Rank-weighted headcount, $H^W$ & -- & -- & 13.88\% & 8.31\% & 5.08\% \\
+Concentration index, $C^O$ & -- & -- & -0.2419 & -0.2459 & -0.2489 \\
+Rank-weighted overshoot, $O^W$ & -- & -- & 6.63\% & 5.55\% & 4.59\% \\
+\addlinespace
+\multicolumn{6}{l}{\textit{OOPG as a share of adult-equivalence capacity to pay}} \\
+Concentration index, $C^H$ & -- & -0.2530 & -- & -0.3223 & -0.3364 \\
+Rank-weighted headcount, $H^W$ & -- & 20.70\% & -- & 9.09\% & 5.43\% \\
+Concentration index, $C^O$ & -- & -0.3298 & -- & -0.3453 & -0.3476 \\
+Rank-weighted overshoot, $O^W$ & -- & 8.06\% & -- & 6.01\% & 4.95\% \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item Notes: Distribution-sensitive measures use household weights and rank households by pre-OOPG welfare, defined as monthly official real per-capita consumption under the no-addback assumption.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+Table~\ref{tab:distribution} shows how the interpretation changes when incidence is read alongside welfare rank. Positive concentration indices indicate that the relevant catastrophic measure is more concentrated among better-off households, while negative values indicate concentration among poorer households. For the 10\% total-expenditure headcount, the concentration index is -0.1850, and the rank-weighted headcount is 9.95\%. For the 40\% nonfood headcount, the concentration index is -0.2343, with a rank-weighted headcount of 5.08\%. Under the CTP approach, the 40\% CTP concentration index is -0.3364. This pattern should be interpreted carefully: lower observed catastrophic spending among poorer households may reflect lower service use or lower ability to pay, not necessarily protection from need.
+
+\begin{table}[!htbp]
+\centering
+\begin{threeparttable}
+\caption{OOPG-associated poverty impact}
+\label{tab:poverty}
+\small
+\begin{tabular}{lccc}
+\toprule
+Measure & Pre-OOPG & Post-payment & Change \\
+\midrule
+Poverty headcount & 20.27\% & 23.40\% & +3.13 pp \\
+Poverty gap (monthly NPR) & 275 & 354 & +80 \\
+Normalized poverty gap & 4.52\% & 5.83\% & +1.31 pp \\
+Mean positive gap (monthly NPR) & 1,355 & 1,514 & +160 \\
+Mean positive normalized gap & 22.30\% & 24.92\% & +2.63 pp \\
+\addlinespace
+People pushed below poverty line & -- & -- & 898,800 \\
+Households crossing poverty line & -- & -- & 264 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item Notes: Estimates use individual survey weights. Pre-OOPG welfare is monthly official NLSS pcep ($pcep/12$) under the no-addback assumption. Post-OOPG welfare subtracts monthly real per-capita OOPG from $pcep/12$ and is floored at zero where raw subtraction would be negative.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+Table~\ref{tab:poverty} reports the no-addback poverty-impact calculation. Pre-OOPG welfare is monthly official NLSS $pcep/12$, while post-OOPG welfare subtracts monthly real per-capita OOPG from $pcep/12$ with a zero floor. The poverty line is also converted to monthly terms as $pline/12$. The table indicates that OOPG raises the poverty headcount from 20.27\% to 23.40\%, a change of +3.13 pp, corresponding to approximately 898,800 people pushed below the poverty line.
+
+\section{Discussion}
+
+The three denominators answer related but distinct questions. The total-expenditure measure provides an intuitive budget-share headline. The nonfood measure narrows the denominator to resources outside food consumption and therefore moves closer to an ability-to-pay interpretation. The adult-equivalence CTP measure is the most welfare-sensitive because it explicitly protects a household-specific subsistence requirement before evaluating health-payment burden.
+
+The adult-equivalence adjustment is not used in the simple total-expenditure ratio because it would either cancel algebraically or create an inconsistent comparison of household payments with per-equivalent-adult consumption. Its appropriate role is in the construction of capacity to pay, where household composition affects the estimated resources needed for basic living.
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,6 @@
+parameter,value,note
+food_share_p45,.5007518453754626,weighted 45th percentile of no-addback food share
+food_share_p55,.5479357808232368,weighted 55th percentile of no-addback food share
+middle_band_households,978,unweighted count in weighted 45th-55th band
+subsistence_line_ae_mo,7893.925606590215,monthly NPR per adult equivalent
+post_oopg_zero_floor_households,42,"households with pcep/12 minus monthly OOPG below zero, floored at zero"

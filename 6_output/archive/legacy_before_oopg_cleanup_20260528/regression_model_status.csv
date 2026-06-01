@@ -1,0 +1,5 @@
+model,outcome,role,rc,note
+m1_oopg_tot10,che_oopg_tot10,main,0,converged
+m2_oop_tot10,che_oop_tot10,main,0,converged
+m3_oopg_nf40,che_oopg_nf40,supplement,430,estimated but convergence not achieved; excluded
+m4_oop_nf40,che_oop_nf40,supplement,0,converged

@@ -1,0 +1,300 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.78in]{geometry}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{float}
+
+\renewcommand{\arraystretch}{1.18}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\title{\textbf{Chapter 18 Catastrophic Payment Results}\\
+\large OOPG and OOP, Nepal NLSS IV 2022/23}
+\author{Arpan's calculations from NLSS IV}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Purpose of This Chapter 18 Output}
+
+This report follows Chapter 18 of \emph{Analyzing Health Equity Using Household
+Survey Data}. The chapter studies catastrophic health payments by combining
+three ideas: incidence, intensity, and distribution. Incidence asks whether a
+household crosses a catastrophic threshold. Intensity asks how far beyond the
+threshold the household goes. Distribution-sensitive measures ask whether the
+burden is concentrated among poorer or better-off households.
+
+The report applies these ideas to two household out-of-pocket payment scopes.
+\textbf{OOPG} is out-of-pocket spending on communicable disease or injury from
+NLSS Section 8(B). \textbf{OOP} adds NCD out-of-pocket spending to OOPG after
+converting the NCD amount from annual to monthly terms. The two scopes are shown
+side by side because OOPG captures a narrower acute burden, while OOP captures a
+broader household health-payment burden.
+
+The estimates use household survey weights. The primary total-expenditure
+denominator is reconstructed monthly nominal household consumption with
+OOPG/general health spending added back. The primary nonfood denominator is real
+monthly household nonfood consumption with OOPG added back.
+Distribution-sensitive measures rank households by pre-OOP welfare.
+
+
+\clearpage
+\section*{OOPG: Catastrophic Payment Results}
+
+OOPG refers to out-of-pocket spending on communicable disease or injury from NLSS Section 8(B). It is the narrower health-payment concept in this report, so it captures an acute communicable/injury-related burden rather than the full household health-payment burden. The purpose of this section is to read the Chapter 18
+measures in sequence: first whether households cross the catastrophic threshold,
+then how far they cross it, and finally where that burden falls in the welfare
+distribution.
+
+\subsection*{Incidence and intensity}
+
+Table 1 for OOPG answers two linked questions. The head count, $H$, asks how
+many households cross each threshold. The overshoot, $O$, asks how far the
+population lies above the threshold on average. The mean positive overshoot,
+MPO, then focuses only on households that crossed the threshold.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.40\textwidth}rrrrr}
+\toprule
+\textbf{Catastrophic payment measure} & \textbf{5\%} & \textbf{10\%} & \textbf{15\%} & \textbf{25\%} & \textbf{40\%} \\
+\midrule
+\multicolumn{6}{l}{\emph{OOPG as share of total expenditure}} \\
+Head count (H) & 15.06\% & 7.40\% & 4.10\% & 1.76\% & --- \\
+standard error & 0.67\% & 0.41\% & 0.28\% & 0.16\% & --- \\
+Overshoot (O) & 1.37\% & 0.84\% & 0.56\% & 0.29\% & --- \\
+standard error & 0.08\% & 0.06\% & 0.05\% & 0.03\% & --- \\
+Mean positive overshoot (MPO) & 9.08\% & 11.35\% & 13.74\% & 16.41\% & --- \\
+\addlinespace
+\multicolumn{6}{l}{\emph{As share of nonfood expenditure}} \\
+Head count (H) & --- & --- & 9.73\% & 4.98\% & 2.16\% \\
+standard error & --- & --- & 0.49\% & 0.32\% & 0.20\% \\
+Overshoot (O) & --- & --- & 1.57\% & 0.87\% & 0.37\% \\
+standard error & --- & --- & 0.10\% & 0.07\% & 0.04\% \\
+Mean positive overshoot (MPO) & --- & --- & 16.17\% & 17.55\% & 17.09\% \\
+\bottomrule
+\end{tabular}
+\caption{Incidence and intensity of catastrophic OOPG payments.}
+\end{table}
+
+At the 10\% total-expenditure threshold, 7.40\% of households experience
+catastrophic OOPG spending. At the stricter 40\%
+capacity-to-pay threshold, the head count is 2.16\%. The 10\% total-
+expenditure overshoot is 0.84\%, while the MPO is 11.35\%. This means that among
+households crossing the 10\% threshold, average spending is not just slightly
+above the threshold; it exceeds the threshold by the MPO amount.
+
+The nonfood denominator gives a stricter view of financial burden because it is
+based on nonfood expenditure with health payments added back. For
+OOPG, the 15\% total-expenditure head count is 4.10\%, while the 15\%
+nonfood-expenditure head count is 9.73\%. The same health payment therefore
+appears more burdensome when measured against the household's nonfood capacity.
+
+\subsection*{Budget-share curve}
+
+The budget-share curve is the visual counterpart to the incidence table.
+Households are ranked from left to right by decreasing health-payment budget
+share. The vertical axis shows the health-payment share. The upper curve uses
+nonfood expenditure as the denominator, and the lower curve uses total
+expenditure.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\textwidth,height=0.54\textheight,keepaspectratio]{oopg/oopg_budget_share_curve.png}
+\caption{OOPG budget-share curve. Households are ranked by decreasing health-payment budget share.}
+\end{figure}
+
+The steep left-hand side of the curve shows that the highest budget shares are
+concentrated among a relatively small group of households. The nonfood curve
+lies above the total-expenditure curve because food spending is excluded from
+the nonfood denominator. This is why the nonfood head counts in the table are
+higher at comparable thresholds.
+
+\subsection*{Distribution-sensitive measures}
+
+Chapter 18 then asks whether catastrophic payments are concentrated among poorer
+or better-off households. The concentration index is the key statistic here. A
+negative value means the burden is concentrated among poorer households, a
+positive value means it is concentrated among better-off households, and a value
+near zero means the burden is more evenly spread.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.43\textwidth}rrrrr}
+\toprule
+\textbf{Distribution-sensitive measure} & \textbf{5\%} & \textbf{10\%} & \textbf{15\%} & \textbf{25\%} & \textbf{40\%} \\
+\midrule
+\multicolumn{6}{l}{\emph{OOPG as share of total expenditure}} \\
+Concentration index, $C^{H}$ & -0.0210 & 0.0490 & 0.1221 & 0.2758 & --- \\
+Rank-weighted head count, $H^{W}$ & 15.38\% & 7.04\% & 3.60\% & 1.28\% & --- \\
+Concentration index, $C^{O}$ & 0.1595 & 0.2562 & 0.3427 & 0.4955 & --- \\
+Rank-weighted overshoot, $O^{W}$ & 1.15\% & 0.62\% & 0.37\% & 0.15\% & --- \\
+\addlinespace
+\multicolumn{6}{l}{\emph{As share of nonfood expenditure}} \\
+Concentration index, $C^{H}$ & --- & --- & -0.0320 & 0.0552 & 0.1797 \\
+Rank-weighted head count, $H^{W}$ & --- & --- & 10.05\% & 4.71\% & 1.77\% \\
+Concentration index, $C^{O}$ & --- & --- & 0.1329 & 0.2289 & 0.3825 \\
+Rank-weighted overshoot, $O^{W}$ & --- & --- & 1.37\% & 0.67\% & 0.23\% \\
+\bottomrule
+\end{tabular}
+\caption{Distribution-sensitive catastrophic payment measures. Households are ranked by pre-OOP welfare.}
+\end{table}
+
+For OOPG, the concentration index for the 5\% total-expenditure head count is
+-0.0210, which is close to zero. At the 25\% total-expenditure threshold, it rises
+to 0.2758. This pattern means that higher-threshold catastrophic payments are
+more concentrated among better-off households. This should not be interpreted as
+poor households being protected. It may instead reflect lower ability among poor
+households to obtain and pay for expensive treatment.
+
+The rank-weighted head count adjusts the ordinary head count for this
+distributional pattern. At the 10\% total-expenditure threshold, the rank-
+weighted head count is 7.04\%. Under the nonfood denominator, the
+15\% concentration index is -0.0320, showing how the equity interpretation can
+change when the denominator focuses on nonfood capacity rather than total
+expenditure.
+
+
+
+\clearpage
+\section*{OOP: Catastrophic Payment Results}
+
+OOP combines OOPG with NCD spending converted from annual to monthly terms. It is the broader health-payment concept in this report and therefore captures more of the household financial burden created by health care. The purpose of this section is to read the Chapter 18
+measures in sequence: first whether households cross the catastrophic threshold,
+then how far they cross it, and finally where that burden falls in the welfare
+distribution.
+
+\subsection*{Incidence and intensity}
+
+Table 1 for OOP answers two linked questions. The head count, $H$, asks how
+many households cross each threshold. The overshoot, $O$, asks how far the
+population lies above the threshold on average. The mean positive overshoot,
+MPO, then focuses only on households that crossed the threshold.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.40\textwidth}rrrrr}
+\toprule
+\textbf{Catastrophic payment measure} & \textbf{5\%} & \textbf{10\%} & \textbf{15\%} & \textbf{25\%} & \textbf{40\%} \\
+\midrule
+\multicolumn{6}{l}{\emph{OOP as share of total expenditure}} \\
+Head count (H) & 32.68\% & 18.47\% & 11.45\% & 5.63\% & --- \\
+standard error & 0.94\% & 0.64\% & 0.54\% & 0.33\% & --- \\
+Overshoot (O) & 4.35\% & 3.12\% & 2.39\% & 1.58\% & --- \\
+standard error & 0.22\% & 0.20\% & 0.18\% & 0.15\% & --- \\
+Mean positive overshoot (MPO) & 13.31\% & 16.90\% & 20.89\% & 28.13\% & --- \\
+\addlinespace
+\multicolumn{6}{l}{\emph{As share of nonfood expenditure}} \\
+Head count (H) & --- & --- & 24.09\% & 14.27\% & 7.57\% \\
+standard error & --- & --- & 0.74\% & 0.54\% & 0.40\% \\
+Overshoot (O) & --- & --- & 7.02\% & 5.16\% & 3.57\% \\
+standard error & --- & --- & 0.39\% & 0.35\% & 0.31\% \\
+Mean positive overshoot (MPO) & --- & --- & 29.15\% & 36.12\% & 47.11\% \\
+\bottomrule
+\end{tabular}
+\caption{Incidence and intensity of catastrophic OOP payments.}
+\end{table}
+
+At the 10\% total-expenditure threshold, 18.47\% of households experience
+catastrophic OOP spending. This is much larger than the corresponding OOPG estimate, showing how strongly NCD spending changes the picture. At the stricter 40\%
+capacity-to-pay threshold, the head count is 7.57\%. The 10\% total-
+expenditure overshoot is 3.12\%, while the MPO is 16.90\%. This means that among
+households crossing the 10\% threshold, average spending is not just slightly
+above the threshold; it exceeds the threshold by the MPO amount.
+
+The nonfood denominator gives a stricter view of financial burden because it is
+based on nonfood expenditure with health payments added back. For
+OOP, the 15\% total-expenditure head count is 11.45\%, while the 15\%
+nonfood-expenditure head count is 24.09\%. The same health payment therefore
+appears more burdensome when measured against the household's nonfood capacity.
+
+\subsection*{Budget-share curve}
+
+The budget-share curve is the visual counterpart to the incidence table.
+Households are ranked from left to right by decreasing health-payment budget
+share. The vertical axis shows the health-payment share. The upper curve uses
+nonfood expenditure as the denominator, and the lower curve uses total
+expenditure.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\textwidth,height=0.54\textheight,keepaspectratio]{oop/oop_budget_share_curve.png}
+\caption{OOP budget-share curve. Households are ranked by decreasing health-payment budget share.}
+\end{figure}
+
+The steep left-hand side of the curve shows that the highest budget shares are
+concentrated among a relatively small group of households. The nonfood curve
+lies above the total-expenditure curve because food spending is excluded from
+the nonfood denominator. This is why the nonfood head counts in the table are
+higher at comparable thresholds.
+
+\subsection*{Distribution-sensitive measures}
+
+Chapter 18 then asks whether catastrophic payments are concentrated among poorer
+or better-off households. The concentration index is the key statistic here. A
+negative value means the burden is concentrated among poorer households, a
+positive value means it is concentrated among better-off households, and a value
+near zero means the burden is more evenly spread.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.43\textwidth}rrrrr}
+\toprule
+\textbf{Distribution-sensitive measure} & \textbf{5\%} & \textbf{10\%} & \textbf{15\%} & \textbf{25\%} & \textbf{40\%} \\
+\midrule
+\multicolumn{6}{l}{\emph{OOP as share of total expenditure}} \\
+Concentration index, $C^{H}$ & 0.0179 & 0.0781 & 0.1167 & 0.2171 & --- \\
+Rank-weighted head count, $H^{W}$ & 32.10\% & 17.03\% & 10.11\% & 4.41\% & --- \\
+Concentration index, $C^{O}$ & 0.2354 & 0.3102 & 0.3769 & 0.4884 & --- \\
+Rank-weighted overshoot, $O^{W}$ & 3.33\% & 2.15\% & 1.49\% & 0.81\% & --- \\
+\addlinespace
+\multicolumn{6}{l}{\emph{As share of nonfood expenditure}} \\
+Concentration index, $C^{H}$ & --- & --- & 0.0093 & 0.0662 & 0.1552 \\
+Rank-weighted head count, $H^{W}$ & --- & --- & 23.86\% & 13.33\% & 6.40\% \\
+Concentration index, $C^{O}$ & --- & --- & 0.2162 & 0.2821 & 0.3606 \\
+Rank-weighted overshoot, $O^{W}$ & --- & --- & 5.50\% & 3.70\% & 2.28\% \\
+\bottomrule
+\end{tabular}
+\caption{Distribution-sensitive catastrophic payment measures. Households are ranked by pre-OOP welfare.}
+\end{table}
+
+For OOP, the concentration index for the 5\% total-expenditure head count is
+0.0179, which is close to zero. At the 25\% total-expenditure threshold, it rises
+to 0.2171. This pattern means that higher-threshold catastrophic payments are
+more concentrated among better-off households. This should not be interpreted as
+poor households being protected. It may instead reflect lower ability among poor
+households to obtain and pay for expensive treatment.
+
+The rank-weighted head count adjusts the ordinary head count for this
+distributional pattern. At the 10\% total-expenditure threshold, the rank-
+weighted head count is 17.03\%. Under the nonfood denominator, the
+15\% concentration index is 0.0093, showing how the equity interpretation can
+change when the denominator focuses on nonfood capacity rather than total
+expenditure.
+
+
+\clearpage
+\section*{Overall Lesson}
+
+The central lesson is that catastrophic health spending is visible under both
+definitions, but the burden is much larger when NCD spending is included. OOPG
+identifies the communicable/injury-related part of the problem. OOP shows the
+broader financing burden faced by households. For the paper, OOP should carry
+the main headline result, while OOPG should be used as a narrower comparison
+that helps show how much of the burden is added when NCD payments are included.
+
+The equity interpretation also requires care. Positive concentration indices at
+higher thresholds show that the most extreme measured payments are more common
+among better-off households. In a health-financing setting, this can reflect
+greater ability to seek and pay for care, not necessarily lower need among poor
+households. This point connects naturally to the next step, Chapter 19, where we
+study whether health payments are associated with impoverishment.
+
+\end{document}

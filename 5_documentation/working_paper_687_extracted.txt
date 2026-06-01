@@ -1,0 +1,639 @@
+
+
+--- PAGE 1 ---
+Does the Equivalence Scale Matter?
+Equivalence and Out-of-Pocket Payments
+Steven F. Koch
+ERSA working paper 687
+June 2017
+Economic Research Southern Africa (ERSA) is a research programme funded by the National
+Treasury of South Africa.
+The views expressed are those of the author(s) and do not necessarily represent those of the funder, ERSA or the author’s affiliated
+institution(s). ERSA shall not be liable to any person for inaccurate information or opinions contained herein.
+
+--- PAGE 2 ---
+Does the Equivalence Scale Matter?
+∗
+Equivalence and Out-of-Pocket Payments
+Steven F. Koch†
+May 2017
+Abstract
+We evaluate the effects of different equivalence scale parameter estimates on the
+distribution of catastrophic health payments in South Africa. Our analysis makes
+use of Xu et al.’s (2003) initial estimate, which underscores the World Health Or-
+ganization’s methodology (Xu, 2005). We also update it using more recent data
+for one of the original countries included in Xu et al. (2003), South Africa. South
+Africa is considered, because the data used in Xu et al. (2003) was collected before
+the end of Apartheid, and the end of Aparthied has led to extensive social and
+economic changes, which could have influenced equivalence. We extend the empiri-
+cal exercise by estimating a base-independent equivalence scale via semiparametric
+methods. Using these equivalence scales, we examine their effect on the distribution
+of catastrophic health payments using thresholds of 5%, 10% and 15%. The revised
+estimates suggest that the initial equivalence estimates were overstated by as much
+as 35%, such that poverty lines in the country were understated by as as much
+as 17%. However, despite these large differences, the distribution of catastrophic
+health expenditures were unaffected.
+Keywords: Catastrophic Health Payments, Equivalence Scales, Semiparametric
+Estimation
+∗The author would like to thank Economic Research Southern Africa for their financial support. The
+author would also like to thank Adonis Yatchew for initial help with coding the empirical analysis, as
+well as participants at the University of Pretoria Department of Economics Seminar Series for their
+useful comments.
+†Department of Economics, University of Pretoria, Pretoria, Republic of South Africa; (O) 27-12-
+420-5285, (F) 27-86-691-2749. steve.koch@up.ac.za
+
+--- PAGE 3 ---
+1 Introduction
+Adult equivalence is an important component in the financial risk protection and equity
+literatures, as it used, in part, to determine poverty lines within a country (Xu et al.,
+2003). Those poverty lines do not require purchasing power parity or the need for
+other sorts of cross-country adjustments, and, therefore, the resulting financial risk
+measures, such as catastrophic health expenditure, are comparable across countries.
+The equivalence scale used in this literature is underpinned by Xu et al.’s (2003) cross-
+country regression model, and the World Health Organization methodology (Xu, 2005).
+Defining E as the equivalence scale, A as the number of adults in the household and K
+as the number of children in the household, the equivalence scale is based on estimation
+of (1), ignoring country fixed effects, where γˆ = 0.56 from Xu et al. (2003).
+E = (A + K) δ (1)
+As the methodology is well-established, it is commonly applied. Recent research, for
+example, is available for Viet Nam (Van Minh et al., 2013), Kenya (Buigut et al., 2015),
+China (Li et al., 2014), India (Misra et al., 2015), Nigeria (Ataguba, 2012), South Africa
+(Harris et al., 2011) and Zambia (Masiye et al., 2010), amongst others.
+Although the history of equivalence scale estimation is relatively long, the methods
+relate to Engel’s (1857) argument that the share of food expenditure in the household
+budget is a useful indicator of household welfare; thus, an equivalence scale is an ex-
+penditure ratio. It is the ratio of expenditure in a comparator household to that in a
+reference household, where the comparator expenditure is the amount required to match
+its household budget share on food to the reference household’s food share. As Nicholson
+(1976) notes, however, Engel (1857)-type equivalence scales are likely to over-estimate
+the cost of a child, since children, especially young children, primarily consume only
+food and clothing. Furthermore, such methods ignore behavioural aspects associated
+with childbirth.1 Finally, estimating equivalence scales following the Engel method is
+1Presumably, households that plan to have a (another) child, believe such an addition to the household
+will bring both joy and additional costs. Since equivalence scales generally only focus on costs, they are
+likely to further overstate the (net) cost of children.
+2
+
+--- PAGE 4 ---
+complicated by the fact that even though we can observe the household structure, i.e.,
+the number of adults and children, and food expenditure shares in that household, it is
+not possible to directly estimate (1). The actual equivalence value is not observed; it
+must be inferred from a different estimation model.
+The Xu et al. (2003) approach simplifies Engel’s (1857) argument. According to
+them, it is not the food share that determines household welfare; instead, it is (equiv-
+alized) per capita food consumption that determines welfare. Such a simplification,
+which is easier to estimate than the Engel-type equivalence scale, might not provide a
+particularly appropriate estimate of equivalence. Furthermore, it would be reasonable
+to assume that household food purchase behaviour, and even household structure, has
+changed rather significantly in the intervening years. Citing just one example, the South
+African data used by Xu et al. (2003) was collected in 1993 – nearly one-quarter of a
+century ago and one year before the post-Apartheid period began. Wittenberg and
+Collison (2008), for example, show that households were nearly one person smaller in
+2003 than in 1992, in at least one area of South Africa, while Leibbrandt and Levinsohn
+(2011) suggest a larger national decline had occurred between 1993 and 2008. Given
+such a large change in household structure, it is reasonable to assume that Xu et al.’s
+(2003) estimate of adult equivalence for South Africa are no longer representative of
+South Africa.
+Within the financial risk protection methodology, if the equivalence estimate is incor-
+rect, estimates of the poverty line, subsistence spending in the household, and, therefore,
+estimates of capacity-to-pay could be incorrect. If each of those is incorrect, reported
+catastrophic health expenditure and social determinants of that expenditure could be
+incorrectly estimated. Therefore, in this research, we empirically investigate whether or
+not the Xu et al. (2003) equivalence scale estimate remains appropriate in South Africa;
+we estimate with 2010-11 data, rather than 1993 data. We further extend that com-
+parison to an Engel-type equivalence scale estimate following Yatchew et al.’s (2003)
+semiparametric formulation. Given the well-established observation that equivalence
+scales differ – see Nicholson (1976) for an early discussion and Posel et al. (2016) for a
+recent discussion applied to South Africa, we expect to find differences in the estimates.
+3
+
+--- PAGE 5 ---
+Although Posel et al. (2016) examine differences in equivalence scales, they do not pro-
+vide any estimates; rather, they examine the effect of a range of hypothesized values on
+poverty rates. Thus, our analysis provides the most recent equivalence scale update that
+is avaialble. Finally, we ask whether these equivalence scale differences affect the poverty
+lines, subsistence levels, capacities-to-pay, and, eventually, the catastrophic health care
+payments that would arise.
+As expected, we find that equivalence scales in South Africa are no longer similar to
+those estimated by Xu et al. (2003); South Africa has changed, and so has its households’
+behaviours. Our semiparametric Engel (1857)-type estimates suggests smaller equiva-
+lence scales both compared to those reported in Xu et al. (2003) and those that would
+be estimated applying Xu et al.’s (2003) methodology to more recent data. We further
+find that reduced equivalence scales yield increases in the estimated povery lines of up
+to 17%. However, the increased poverty line has very little impact on the estimated
+subsistence level, capacity-to-pay or catastrophic health expenditure. In other words,
+the choice of equivalence scale does not appear to matter all that much, at least in the
+case of South Africa, when determining the degree of financial risk protection afforded
+by the health care sector in a country.
+2 Methods
+Out-of-pocket payments and total expenditures are extracted from the 2010 South
+African Income and Expenditure Survey (Statistics South Africa, 2013) following the
+World Health Organization methodology (Xu, 2005). In addition to those, we also
+extract household size (the total number of children and adults) and the race of the
+household head, the latter of which is used to see whether or not equivalence scales and
+effects related to adult equivalence differ across race.
+2.1 WHO Methodology
+The Income and Expenditure Survey (IES) uses classification of individual consump-
+tion by purpose (COICOP) categories, and our primary interest is in category 06.2 All
+2See https://unstats.un.org/unsd/cr/registry/regcst.asp?Cl=5 for additional detail.
+4
+
+--- PAGE 6 ---
+expenditures on COICOP category 061 are coded as medical products, which includes
+medicines (with and without prescription), medical products (such as bandages and sy-
+ringes) and therapeutic devices (including spectacles, hearing aids and braces). However,
+if medicines or bandages, for example, are given to outpatients or to inpatients, those
+expenses are not recorded in 061; instead, they would lie in 062 or 063. Expenditures
+on COICOP category 062 are coded as outpatient services, which is further separated
+into medical, dental and paramedical. It is expected that these services are delivered at
+home or in clinics. Expenditures in category 063 are coded as hospital services. Impor-
+tantly, and somewhat confusingly, this last category often does not include surgeries, as
+many surgeries are managed as outpatient services. COICOP also includes categories
+13.2 and 14.2, health expenditures made for households by either non-profit institutions
+(13.2) or by government (14.2); however, there are no such observations in the South
+African IES. Expenditures from 061-063 are aggregated to determine the total, which
+we denote as O.
+Total household consumption expenditure x includes all monetary and in-kind con-
+sumption expenditures, including home-made products. To calculate capacity-to-pay,
+we subtract either subsistence expenditure from total expenditure, (if the household’s
+food expenditure exceeds their subsistence level) or food expenditure (if not); subsis-
+tence expenditure is determined by household equivalent food expenditures for house-
+holds in the middle of the food expenditure share distribution. To get to these values,
+a number of steps are required. Initially, household food expenditure, denoted by f is
+constructed.3 In addition, we calculate equivalent household size. This equivalence will
+be further discussed below.4 We denote the share of food expenditure as w f = f /x, as
+well as equivalized food expenditure, which is the ratio of food expenditure to equiva-
+lent household size, i.e., f e = f /E. We pull out the middle 10% of the w f distribution
+and calculate a weighted average in the following manner. We define an indicator,
+I (w f 45 < w f,i < w f 55 ), which is true (and therefore equal to one) if household i’s food
+3It is taken from COICOP category 01, but excludes categories 02 and 11, because we are asked to
+ignore alcohol and tobacco (category 02) along with food away from home (category 11), although it
+is necessary to include food production at home, such as garden produce. Unfortunately, home food
+production is not necessarily well-measured in the survey.
+4We make use of a variety of estimates in this research, and we calculate capacity-to-pay for each of
+those equivalence estimates. However, we rely on (1), allowing for potentially different values of θ.
+5
+
+--- PAGE 7 ---
+share, w lies between the 45th and 55th percentile of all food shares in the sample. The
+f
+sample weighted average of equivalized food expenditure within this percentile range is
+referred to as the poverty line, (cid:96). In the following equation, Ω refers to the household
+i
+weight, or the inverse of the probability that the household could be expected to be
+included in the survey, given the sample frame used, corrected for non-response and
+other sampling problems.
+Ω f
+(cid:96) =
+∑i∶I=1 i ei
+(2)
+Ω
+∑i∶I=1 i
+That poverty line determines the subsistence level s for the household, which is the
+poverty line multiplied by the number of equivalent adults.
+s = (cid:96) × E (3)
+The previously defined subsistence level is paramount to the development of the final
+capacity-to-pay. Specifically, where C is capacity-to-pay,
+⎧
+⎪⎪⎪⎪⎪
+x − s if s ≤ f
+C = ⎨ (4)
+⎪⎪⎪⎪⎪
+x − f otherwise
+⎩
+Given capacity-to-pay and out-of-pocket payments, the share of the capacity devoted to
+out-of-pocket payments is simply the ratio, w o = O/C. Once the share of capacity-to-pay
+devoted to out-of-pocket expenditures has been calculated, whether or not the household
+has been seriously affected by these payments can be calculated; however, it depends
+on an arbitrary threshold. For example, given a proportion, κ, a household is defined
+as facing catastrophic payments if ther w share is too high, or exceeds κ. Recalling
+o
+the indicator function, we define k as a binary indicator of catastrophic payments; thus,
+k = I (w o ≥ κ). Since out-of-pocket expenditure is fairly low in South Africa (Koch,
+2015), our analysis will focus on κ = {0.05, 0.1, 0.15}.
+2.2 Extracting Equivalence Scales
+Xu et al. (2003) applied a simple cross-country model (with country fixed effects) to
+estimate (1). In order to update that initial estimate, since we are working with only
+6
+
+--- PAGE 8 ---
+one country, we will drop the fixed effects and regress the natural log of total food
+expenditures f against the natural log of household size (A + K).
+ln f = δ 0 + δ 1 ln(A + K) + (cid:15) (5)
+In the original formulation, δˆ 1 = 0.56. Thus, we estimate (5) on newer data to see if the
+estimate of 0.56 remains a reasonable approximation.
+In addition, we estimate an Engel-type equivalence scale underpinned by equivalence-
+scale-exactness, or base-independence (see Lewbel, 1989; Blundell and Lewbel, 1991;
+Blackorby and Donaldson, 1993; Pendakur, 1999; Donaldson and Pendakur, 2003, for
+details). Intuitively, base-independence requires the equivalence scale to remain the
+same for all levels of utility, and, therefore, it cannot depend on expenditure. Defining
+w as before, p as prices, x as before and z as household demographic information, while
+f
+the superscript r connotes the reference household, a base-independent equivalence scale
+can be implicitly defined from the following relationship.
+w f (p, x, z) = w f (p, xr, zr ) + η(p)
+(6)
+x
+= w f (p, , zr ) + η(p)
+Θ(z)
+Unfortunately, there are no prices in the data, further simplifying the model.
+x
+w f (x, z) = w f ( , zr ) + η (7)
+Θ(z)
+The model in (7) is highly nonlinear; log-linear models do not allow for the identification
+of the equivalence scale in this setting (Blackorby and Donaldson, 1993). Thus, one is left
+trying to estimate the equivalence scale using semiparametric methods, as in Pendakur
+(1999) or Yatchew et al. (2003). For our analysis, we follow the latter. Rewrite (7) as a
+partial linear model, where the function g is not known, and X = ln x − θ ln(A + K).
+w f (x, z) = g (X) + (A + K)η + ε (8)
+The model to be estimated is not a pure partial linear model, because X contains an
+7
+
+--- PAGE 9 ---
+additional parameter to be estimated, as in a linear index model. In order to estimate
+(8), we undertake a grid search over θ and estimate η at each value of θ following
+the double-residual method (Robinson, 1988). Thus, (i) we fix θ, (ii) nonparametrically
+estimate w against X, (iii) collect the residuals, (iv) nonparametrically estimate (A+K)
+against X, (v) collect the residuals, and (vi) regress the first set of residuals against the
+second set of residuals. We repeat this process over plausible values of θ and choose
+the θ that minimizes the sum of squared errors.5 This formulation yields a household
+economies of scale parameter, like that in (1), which mimicks the application in Xu et al.
+(2003); thus, the two estimates are directly comparable.
+2.3 Data
+As discussed above, data for the analysis was taken from the 2010/11 South African IES
+(Statistics South Africa, 2013). This survey was designed to analyze the consumption
+basket that underpins the Consumer Price Index. For that reason, the survey contains
+detailed information about household consumption, including out-of-pocket expendi-
+tures. The survey also contains a fair bit of information about individuals within the
+households, which we will highlight, below. Statistics South Africa switched to COICOP
+in 2005/06. In addition to the COICOP switch, 2005/06 saw the arrival of a rolling time-
+line – different households were surveyed at different points in time during a 12-month
+cycle – and consumption diaries.
+The IES is based on multi-stage stratified random samples; thus, each response
+comes with a weight, defined at the level of the household, that can be used to create
+population relevant statistics.6 Those weights are used in the analysis; see (2).
+Descriptive statistics are presented in Table 1. The first column contains summary
+statistics for all households in the sample, which includes Asian households; as a sub-
+5We use linear least-squares cross-validated local linear regression (Li and Racine, 2004) for the
+nonparametric estimators. The models are estimated in Hayfield and Racine’s (2008) nonparametric
+package for R Core Team (2016). Additional details and results are available upon request from the
+authors.
+6The household weight, Ω = (p ×p ×a)−1, where p refers to the probability that PSU “s” was chosen
+i s h s
+from the set of all PSUs demarcated by Statistics South Africa, p is the probability that household “h”
+h
+was chosen from all of the households in the PSU, and a is the non-response adjustment. According
+to Statistics South Africa, the weights are benchmarked to the population in five year age groups and
+across race using the SAS macro CALMAR.
+8
+
+--- PAGE 10 ---
+Table 1: Descriptive Statistics of 2010 IES Data
+All HH Black HH Coloured HH White HH
+Household Size 3.75 3.79 3.84 2.67
+Food Expenditure 951.72 831.98 1272.54 1623.81
+Food Share 0.25 0.27 0.25 0.09
+Total HH Expenditure 6630.26 4585.65 7766.59 23048.87
+OOP Expenditure 88.78 51.23 107.58 398.09
+Total expenditure, food expenditure and out-of-pocket (OOP) health ex-
+penditure calculated according to Xu (2005) methodology using 2010 South
+African Income and Expenditure Survey Statistics South Africa (2013); how-
+ever, the food share is the ratio of food expenditure to total household ex-
+penditure. All monetary figures are presented in March 2011 South African
+Rand (ZAR6.77/$US1.00).
+group, there are not enough Asian households to undertake a further separate analysis.
+In the remaining columns, data is reported by household population group. Only in
+1994 was complete suffrage (for all citizens aged 18 and above) the law of the land.
+Preceding that election, individuals were discriminated against based only on popula-
+tion group. That discrimination advantaged whites, over coloureds over blacks, and, as
+can be seen in the table, there remains little sense of equality across races, yet. White
+households are the smallest, on average; they also spend the most on food, health care
+and all goods. Furthermore, using Engel’s criteria, white households spend the least on
+food as a share of their budget, and, therefore, white households have the highest level
+of welfare; Leibbrandt and Levinsohn (2011) reach fairly similar conclusions following
+more careful methods.
+3 Results
+3.1 Updated Equivalence Scale Estimates
+The first set of results for the analysis are presented in Table 2, which contains semipara-
+metric estimates of (8), as well as updated estimates of (5). The table contains eight
+rows, two each for all households, black households, coloured households and white
+households. In other words, separate models were estimated across each population
+group (for which there was enough data) and for the entire sample. The table also
+contains seven columns, which includes the estimates θ and η in (8), along with the
+9
+
+--- PAGE 11 ---
+cross-validated bandwidths from the separate nonparametric regressions required for
+Robinson’s (1988) double-residual method; the bandwidths are cross-validated via least
+squares (Li and Racine, 2004). The columns also include the coefficient of determination
+R2, sum of squared residuals s2 (from the double-residual model), and the number of
+observations in the sample or subsample.
+A number of implications arise from these estimates. Firstly, food expenditure,
+as modeled by Xu et al. (2003) is not well explained; the semiparametric model in
+(8) is better at explaining the share of food expenditure than (5) is at explaining the
+natural log of total food expenditure. However, the coefficient of determination is not
+comparable across model types. Secondly, the updated values for Xu et al.’s (2003)
+log-linear food expenditure model (5) are smaller than the original estimates reported
+therein, the reductions are statistically significant for the entire sample, black households
+and coloured households. Thirdly, the semiparamatric estimate (8) is smaller than even
+the updated estimates; again, with the exception of white households, the differences are
+statistically significant, when compared to the initial estimate of 0.56 (from Xu et al.,
+2003).
+3.2 Equivalence Scales and WHO Methodology Components
+Given the definition of the poverty line (2), one would expect to see poverty lines vary
+with equivalence scale. Given the definition of the subsistence level, see (3), one would
+also expect it to vary with equivalence. However, the scale influences the subsistence
+level directly in one direction, but indirectly (through the poverty line) in the opposite
+direction; thus, the overall effect is an empirical question. Because it is not entirely
+clear whether the subsistence level will increase or decrease with the equivalence scale
+parameter, it is an open question whether or not capacity-to-pay and/or catastrophic
+health payments will be affected in any one particular direction. Our empirical analysis
+addresses these questions.
+We report our estimates of the effect of the equivalence scale parameter on all three
+of the aforementioned components for all households (see Table 3), as well as black
+households, coloured households and white households (see Table 4). Each table includes
+10
+
+--- PAGE 12 ---
+Table 2: Equivalence Compared to Single-Adult Households
+θˆ ηˆ bandwidth bandwidth
+Race (s.e.) (s.e.) ln x (A + K) s2 R2 N
+Black HH SP 0.3664 0.0053 0.3401 0.2439 0.0202 0.2785 19473
+(0.004) (0.000)
+Black HH LM 0.4684 N/A - - - 0.1482
+(0.008)
+Colour HH SP 0.3641 0.0054 0.5800 0.3313 0.0172 0.3831 2581
+(0.045) (0.005)
+Colour HH LM 0.5214 N/A - - - 0.1229
+(0.027)
+White HH SP 0.5121 -0.0020 1.2728 0.3216 0.0051 0.2128 1960
+(0.126) (0.006)
+White HH LM 0.5126 N/A - - - 0.0997
+(0.035)
+All HH SP 0.4157 0.0044 0.3752 0.2181 0.0186 0.1590 24619
+(0.004) (0.000)
+All HH LM 0.4504 N/A - - - 0.1227
+(0.008)
+Semiparametric (SP) and linear (LM) estimates of equivance across population groups
+assuming E = (A + K) θ, where A is the number of adults and K is the number of
+children in the household; see (8) and (5) for additional details. Semiparametric esti-
+mates follow Robinson’s (1988) double-residual method, underpinned by local linear
+estimates; optimal bandwidths computed via least-squares cross validation (Li and
+Racine, 2004).
+11
+
+--- PAGE 13 ---
+Table 3: Catastrophic Payments for All Households
+Semiparametric Updated LM Original
+Xu (2005) Xu (2005) Xu (2005) Per Capita
+Estimated θ 0.42 0.45 0.56 1.00
+Poverty Line 556.77 535.19 474.07 308.33
+Subsistence Level 918.47 923.63 946.51 1156.20
+Capacity-to-Pay 5969.41 5967.67 5961.39 5929.20
+5% Threshold 9.14 9.13 9.15 9.15
+10% Threshold 2.90 2.90 2.93 2.93
+15% Threshold 1.14 1.14 1.15 1.14
+Catastrophic payments and various components underpinning the catastrophic
+payments for all households in the data. Estimates for all of the values in the
+table are dependent upon the estimated equivalence parameter θ. Column 1
+and 2 figures are underpinned by estimates using 2010 IES data in – see (5)
+and (8) for details. The estimate of 0.56 is taken from Xu et al. (2003), which
+includes data from the 1993 South African PSLSD; those figures are reported
+in Column 3. The figures in Column 4 are based on the assumption that there
+are no equivalence scale adjustments.
+the estimated scale equivalence parameter for that sample and model. Four models are
+considered within each of the four samples. We include the semiparametric and updated
+results from Table 2 – these are denoted “Semiparametric Xu (2005)” and “Updated
+LM Xu (2005)” – along with the “Original Xu (2005)”, which is 0.56, and a per capita
+assumption, which assumes a unit scale parameter. In all of these tables, we use the
+entire data set to calculate the underlying poverty line, determined by the estimated
+scale parameter,7 as well as the scale-specific subsistence level, capacity-to-pay and three
+catastrophic expenditure proportions; one is based on a threshold of 5%, another on a
+threshold of 10% and the last is based on a threshold of 15%.
+For all households, see Table 3, the poverty line falls with the scale parameter,
+while the average household subsistence level rises with the scale parameter. Because
+average susbsistence rises, average capacity-to-pay falls. Since capacity-to-pay remains
+in the denominator for determining potential catastrophic payments, one would expect
+a non-decreasing pattern (from left to right), when considering catastrophic payments.
+Although that pattern does not hold completely at the 15% threshold, the difference
+from expectation is quite small (1.15 for 15% in Column 3 and 9.13 for 5% in Column
+7We have also estimated the poverty line separately across all samples, reaching the same general
+conclusion as we report here. Results available from the authors upon request.
+12
+
+--- PAGE 14 ---
+1). Desipte the fact that the poverty line differs (smallest to largest) by about 64%,
+there are very few differences in the catastrophic health expenditures distributions; the
+difference in poverty line between that underpinned by the initial estimate of 0.56 and
+that of the semiparametric estimate of 0.42 is on the order of 17%. The remaining sets
+of results, see Table 4, lead to the same overall conclusion, although the relationship
+between the national poverty line and the race-specific susbsistence level is not as clear
+cut as was reported in Table 3.8
+The underlying results suggest that black and white households, the poorest and
+the richest, are subject to the highest proportions of catastrophic expenditures; more
+than 9% of households from these samples spend more than 5% of their capacity-to-pay
+on health care, while approximately 3% of the households spend 10% of that capacity
+and just more than 1% spend 15% of that capacity. For black households, only, the
+subsistence level increases with the equivalence scale parameter θ. However, direct rela-
+tionship is empirically uncovered between equivalence scale and catastrophic payments
+or capacity-to-pay. Furthermore, the size of the estimated equivalence scale parame-
+ter has very little affect on the reported catastrophic payment proportions. For black
+and coloured households, adopting the semiparametric scale parameter estimate over
+Xu et al.’s (2003) initial estimate leads to a reduction of about 0.1% in catastrophic
+health payments at the 5% threshold; the reduction is from 9.62 to 9.51 and 5.95 to
+5.80 for black and coloured households, respectively. However, the direction of that
+comparison does not remain the same for higher threshold levels. Thus, there is little
+evidence to suggest that the choice of equivalence scale used in calculating catastrophic
+health payments within the Xu (2005) methodology matters to financial risk protection
+conclusions, at least in the case of South Africa in 2010/11.
+8When the race-based samples are used to create race-specific poverty lines and subsistence levels,
+both decrease with the scale parameter, as seen in Table 3. Regardless of whether we estimate race-
+specific or national poverty lines, we find the same levels of catastrophic health expenditure within race
+groups. Thus, we do not report these additional estimates. Results are available upon request.
+13
+
+--- PAGE 15 ---
+Table 4: Catastrophic Payments for Different Subsamples
+(a) Catastrophic Payments for Black Households
+Semiparametric Updated LM Original
+Xu (2005) Xu (2005) Xu (2005) Per Capita
+Estimated θ 0.37 0.47 0.56 1.00
+Poverty Line 556.77 535.19 474.07 308.33
+Subsistence Level 864.27 949.11 951.08 1170.02
+Capacity-to-Pay 3969.73 3940.83 3941.73 3915.52
+5% Threshold 9.51 9.63 9.62 9.60
+10% Threshold 2.97 3.04 3.05 3.06
+15% Threshold 1.17 1.19 1.20 1.17
+(b) Catastrophic Payments for Coloured Households
+Semiparametric Updated LM Original
+Xu (2005) Xu (2005) Xu (2005) Per Capita
+Estimated θ 0.36 0.52 0.56 1.00
+Poverty Line 556.77 535.19 474.07 308.33
+Subsistence Level 882.63 1046.79 977.24 1184.18
+Capacity-to-Pay 7025.29 6936.68 6972.45 6895.45
+5% Threshold 5.80 6.03 5.95 5.99
+10% Threshold 1.96 2.00 1.96 1.96
+15% Threshold 0.65 0.73 0.73 0.81
+(c) Catastrophic Payments for White Households
+Semiparametric Updated LM Original
+Xu (2005) Xu (2005) Xu (2005) Per Capita
+Estimated θ 0.51 0.51 0.56 1.00
+Poverty Line 556.77 535.19 474.07 308.33
+Subsistence Level 891.01 856.90 795.62 822.28
+Capacity-to-Pay 22287.64 22310.62 22353.64 22346.01
+5% Threshold 9.22 9.22 9.17 9.22
+10% Threshold 3.12 3.12 3.12 2.97
+15% Threshold 1.24 1.24 1.24 1.24
+Catastrophic payments and various components underpinning the catastrophic
+payments calculation for black households (Panel 4a), coloured households
+(Panel 4b) and white households. Estimates for all of the values in the ta-
+ble are dependent upon the estimated equivalence parameter θ. Column 1 and
+2 figures are underpinned by estimates using 2010 IES data in – see (5) and (8)
+for details. The estimate of 0.56 is taken from Xu et al. (2003), which includes
+data from the 1993 South African PSLSD; those figures are reported in Column
+3. The figures in Column 4 are based on per capita equivalence.
+14
+
+--- PAGE 16 ---
+4 Concluding Remarks
+This research has examined the effect of equivalence scale estimation on the various
+components (especially, the poverty line, subsistence level and capacity-to-pay), as well
+as the resulting catastrophic health care payments distribution, of the World Health
+Organization’s methodology for measuring financial risk protection in health care. The
+research applied the initial estimate from Xu et al. (2003) that determines equivalence
+within the WHO’s method (Xu, 2005), updated the estimate following the regression
+structure outlined by Xu et al. (2003), and updated the estimate through the esti-
+mation of base-independent equivalence scales via semiparametric methods (Yatchew
+et al., 2003). The estimates were updated using the 2010/11 South African IES (Statis-
+tics South Africa, 2013) for all households, as well as for three population subgroups.
+Preceding the end of Apartheid in South Africa, individuals were discriminated against
+according to race, and this policy was being slowly dismantled in 1993. The South
+African data included in Xu et al. (2003) was from 1993; thus, it was expected that
+household behaviour, as measured by equivalence scales would differ substantially from
+the initial estimate.
+Our results support this expectation, as updated equivalence scales were statisti-
+cally significantly lower for all households, black households and coloured households,
+although not for white households. In some cases, the reduction was as much as 35%,
+in terms of the actual equivalence scale parameter. Given the large differences in equiv-
+alence scales, this research further examined the impact on the estimated poverty line,
+subsistence level, capacity-to-pay and catastrophic health care payments. Although the
+estimated poverty line increased by as much as 17%, the effect on the subsistence level,
+capacity-to-pay and catastrophic payments was unimportant. Thus, when applying the
+WHO method, although we would recommend considering whether or not the choice of
+equivalence scale is important in the resulting catastrophic health care payment distri-
+bution, our analysis suggests that it is unlikely to lead to extensive differences. And,
+if differences are uncovered, estimating updated equivalence scale parameters, as done
+here, is a fairly innocuous task.
+15
+
+--- PAGE 17 ---
+References
+Ataguba, J. O. E. (2012), ‘Reassessing catastrophic health-care payments with a Nige-
+rian case study’, Health Economics, Policy and Law 7, 309–326.
+Blackorby, C. and Donaldson, D. (1993), ‘Adult-equivalent scales and the economic
+implementation of interpersonal comparisons of well-being’, Social Choice and Welfare
+10, 335–361.
+Blundell, R. and Lewbel, A. (1991), ‘The information content of equivalence scales’,
+Journal of Econometrics 50, 49–68.
+Buigut, S., Ettarh, R. and Amendah, D. A. (2015), ‘Catastrophic health expenditure
+and its determinants in Kenyan slum communities’, International Journal for Equity
+in Health 15.
+Donaldson, D. and Pendakur, K. (2003), ‘Equivalent-expenditure functions and
+expenditure-dependent equivalence scales’, Journal of Public Economics 88, 175–208.
+Engel, E. (1857), Die productions- und consumtionsverhaltnisse des konigreichs sachsen,
+in E. Engel, ed., ‘Dielebenkostenbelgischerarbeiter-familien’, C Heinrich, Dresden.
+Harris, B., Gouge, J., Ataguba, J. O. E., McIntyre, D., Nxumalo, N., Jikwana, S. and
+Chersich, M. (2011), ‘Inequities in access to health care in South Africa’, Journal of
+Public Health Policy 32, S102–S123.
+Hayfield, T. and Racine, J. S. (2008), ‘Nonparametric econometrics: The np package’,
+Journal of Statistical Software 27(5).
+URL: http://www.jstatsoft.org/v27/i05/
+Koch, S. F. (2015), ‘Out-of-pocket payments on health: The 2005-06 and 2010-11 South
+African income and expenditure surveys’, Report to the World Health Organization.
+Leibbrandt, M. and Levinsohn, J. (2011), ‘Fifteen years on: Household incomes in South
+Africa’, NBER Working Paper No. 16661.
+16
+
+--- PAGE 18 ---
+Lewbel, A. (1989), ‘Household equivalence scales and welfare comparisons’, Journal of
+Public Economics 39, 377–391.
+Li, Q. and Racine, J. S. (2004), ‘Cross-validated local linear nonparametric regression’,
+Statistica Sinica 14(2), 485–512.
+Li, Y., Wi, Q., Liu, C., Kang, Z., Xie, X., Yin, H., Jiao, M., Liu, G., Hao, Y. and Ning,
+N. (2014), ‘Catastrophic health expenditure and rural household impoverishment in
+China: What role does the new cooperative health insurance scheme play?’, Plos One
+9, e93253.
+Masiye, F., Kaonga, O. and Kirigia, J. M. (2010), ‘Does user fee removal policy provide
+financial protection from castrophic health care payments? Evidence from Zambia’,
+Plos One 11, e0146508.
+Misra, S., Awasathi, S., Singh, J. V., Agarwal, M. and Kumar, V. (2015), ‘Assessing
+the magnitude, distribution and determinants of catastrophic health expenditure in
+urban Lucknow, North India’, Clinical Epidemiology and Global Health 3, 10–16.
+Nicholson, J. L. (1976), ‘Appraisal of different methods of estimating equivalence scales
+and their results’, Review of Income and Wealth 22, 1–11.
+Pendakur, K. (1999), ‘Semiparametric estimates and tests of base-independent equiva-
+lence scales’, Journal of Econometrics 80(1), 1–40.
+Posel, D., Casale, D. and Grapsa, E. (2016), ‘Re-estimating gender differences in income
+in South Africa: The implications of equivalence scales’, Development Southern Africa
+33(4), 425–441.
+R Core Team (2016), R: A Language and Environment for Statistical Computing, R
+Foundation for Statistical Computing, Vienna, Austria.
+URL: https://www.R-project.org/
+Robinson, P. M. (1988), ‘Root-n-consistent semiparametric regression’, Econometrica
+56, 931–954.
+17
+
+--- PAGE 19 ---
+Statistics South Africa (2013), ‘Income and Expenditure Survey, 2010/11 [Computer
+File]. SADA0193’, Pretoria: Statistics South Africa [producer], 2013. Pretoria: South
+African Data Archive, National Research Foundation [distributor], 2013.
+Van Minh, H., Kim Phong, N. T., Saksena, P., James, C. D. and Xu, K. (2013), ‘Finan-
+cial burden of household out-of-pocket health expenditure in Viet Nam: Findings from
+the national living standard survey 2002-2010’, Social Science & Medicine 56, 258–
+261.
+Wittenberg, M. and Collison, M. (2008), ‘Restructuring of households in rural South
+Africa: Reflections on average household size in the Agincourt sub-district 1992-2003’,
+South Africa Labour and Development Research Unit Working Paper No. 12.
+Xu, K. (2005), ‘Distribution of health payments and catastrophic expenditures: Method-
+ology’, World Health Organization Discussion Paper 2-2005.
+Xu, K., Evans, D. B., Kawabata, K., Zeramdini, R., Klavus, J. and Murray, C. J. L.
+(2003), ‘Household catastrophic health expenditure: A multicountry analysis’, the
+Lancet 362, 111–117.
+Yatchew, A., Sun, Y. and Deri, C. (2003), ‘Efficient estimation of semiparametric equiv-
+alence scales with evidence from South Africa’, Journal of Business & Economic
+Statistics 21(2), 247–257.
+A Out-of-Pocket Payments Distributions
+To provide additional evidence of the limited effect of differing equivalence scale param-
+eter, we illustrate the underlying distribution of the ratio of out-of-pocket payments over
+capacity-to-pay, w , for all households.9 These illustrations are available in Figure A.1.
+o
+As can be seen, there is nothing to distinguish the distribution functions, which further
+supports our conclusion.
+9Similar results are found for the remaining subsamples. Those distribution functions are available
+upon request.
+18
+
+--- PAGE 20 ---
+0.0 0.2 0.4 0.6 0.8
+00.1
+89.0
+69.0
+49.0
+29.0
+09.0
+Empirical CDF of OOP for All Households
+Share of OOP
+noitubirtsiD
+evitalumuC
+Xu (2005)
+Revised Xu
+Revised SP
+None
+Figure A.1: Empirical cumulative distribution function of out-of-pocket payments cov-
+ering all households in the data. Xu (2005) represents the ECDF that would arise
+following Xu (2005). Revised Xu represents the ECDF that would arise following Xu
+(2005), but using the Updated LM θˆ value from Table 2. The revised SP ECDF arises
+from following Xu’s (2005), but using the Semiparametric θˆ value from Table 2. The
+None ECDF arises from ignoring household economies of scale in the calculation of OOP
+shares, assuming θˆ = 1.
+19

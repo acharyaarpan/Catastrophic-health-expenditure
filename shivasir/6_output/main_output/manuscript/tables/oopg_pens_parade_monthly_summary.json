@@ -1,0 +1,13 @@
+{
+  "households": 9600,
+  "pre_oopg_poverty_pct": 20.270485050944885,
+  "post_oopg_poverty_pct": 23.39777835321215,
+  "poverty_change_pp": 3.1272933022672653,
+  "people_pushed": 898799.8418273926,
+  "households_pushed": 264,
+  "negative_raw_post_oopg_households": 42,
+  "mean_pre_oopg_mo_real": 10810.382708687657,
+  "mean_oopg_pc_mo_real": 340.9429036594697,
+  "mean_post_oopg_mo_real_floored": 10499.188305479543,
+  "mean_pline_mo_real": 6075.671223958333
+}

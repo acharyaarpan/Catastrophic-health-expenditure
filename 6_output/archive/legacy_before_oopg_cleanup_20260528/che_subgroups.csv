@@ -1,0 +1,577 @@
+weight,scope,denominator,threshold,che_variable,subgroup,subgroup_label,subgroup_value,prevalence,prevalence_se
+hhs_wt,oopg,total,.1,che_oopg_tot10,poor,0,0,.0684776138601718,.0039770692
+hhs_wt,oopg,total,.1,che_oopg_tot10,poor,1,1,.1015443388399575,.010126759
+hhs_wt,oopg,total,.1,che_oopg_tot10,quintile_pcep,1 (poorest),1,.1028835794721241,.010263964
+hhs_wt,oopg,total,.1,che_oopg_tot10,quintile_pcep,2,2,.0953274964526104,.0092095453
+hhs_wt,oopg,total,.1,che_oopg_tot10,quintile_pcep,3,3,.0791397888960058,.0077397823
+hhs_wt,oopg,total,.1,che_oopg_tot10,quintile_pcep,4,4,.0660410117411565,.006610862
+hhs_wt,oopg,total,.1,che_oopg_tot10,quintile_pcep,5 (richest),5,.0418393024037105,.0044489
+hhs_wt,oopg,total,.1,che_oopg_tot10,prov,Koshi,1,.0611211946157248,.0076015946
+hhs_wt,oopg,total,.1,che_oopg_tot10,prov,Madhesh,2,.1347888498971984,.01922925
+hhs_wt,oopg,total,.1,che_oopg_tot10,prov,Bagmati,3,.0554088026988218,.006769835
+hhs_wt,oopg,total,.1,che_oopg_tot10,prov,Gandaki,4,.0647050266923785,.009216154
+hhs_wt,oopg,total,.1,che_oopg_tot10,prov,Lumbini,5,.0507281873465535,.0072723515
+hhs_wt,oopg,total,.1,che_oopg_tot10,prov,Karnali,6,.0786321366464496,.010147506
+hhs_wt,oopg,total,.1,che_oopg_tot10,prov,Sudurpaschim,7,.0742307306825412,.0094611263
+hhs_wt,oopg,total,.1,che_oopg_tot10,ad_4,Kathmandu,1,.0487556956238321,.010315853
+hhs_wt,oopg,total,.1,che_oopg_tot10,ad_4,Other urban,2,.0770293120887807,.0060636117
+hhs_wt,oopg,total,.1,che_oopg_tot10,ad_4,Rural,3,.0780027947608646,.0054362691
+hhs_wt,oopg,total,.1,che_oopg_tot10,caste_ethnicity,Hill Caste,11,.0650059708425529,.0052432073
+hhs_wt,oopg,total,.1,che_oopg_tot10,caste_ethnicity,Madhesh/Tarai Caste,12,.1144453842442511,.011408139
+hhs_wt,oopg,total,.1,che_oopg_tot10,caste_ethnicity,Mountain/Hill Janajati,21,.0510060981017634,.0054998188
+hhs_wt,oopg,total,.1,che_oopg_tot10,caste_ethnicity,Tarai Janajati,22,.0514240572225864,.0098595247
+hhs_wt,oopg,total,.1,che_oopg_tot10,caste_ethnicity,Hill Dalit,31,.0761079822389148,.0097158281
+hhs_wt,oopg,total,.1,che_oopg_tot10,caste_ethnicity,Madhesh/Tarai Dalit,32,.1497648721617447,.024140991
+hhs_wt,oopg,total,.1,che_oopg_tot10,caste_ethnicity,Religions/Linguistic group,40,.1391864492558961,.024686404
+hhs_wt,oopg,total,.1,che_oopg_tot10,caste_ethnicity,Others & Not stated,50,.1389796020499235,.090662025
+hhs_wt,oopg,total,.1,che_oopg_tot10,head_edu_n,No education,0,.0974468641895307,.0080134682
+hhs_wt,oopg,total,.1,che_oopg_tot10,head_edu_n,Informal/literate,1,.0603751113351337,.014646032
+hhs_wt,oopg,total,.1,che_oopg_tot10,head_edu_n,Primary (1-5),2,.0713563778305302,.0069692307
+hhs_wt,oopg,total,.1,che_oopg_tot10,head_edu_n,Lower secondary (6-8),3,.0702092728230274,.0087139197
+hhs_wt,oopg,total,.1,che_oopg_tot10,head_edu_n,Secondary (9-SLC),4,.0660818711246337,.0070961765
+hhs_wt,oopg,total,.1,che_oopg_tot10,head_edu_n,Higher secondary,5,.0492278251113004,.0081815664
+hhs_wt,oopg,total,.1,che_oopg_tot10,head_edu_n,Bachelor and above,6,.0534043211285007,.01277384
+hhs_wt,oopg,total,.1,che_oopg_tot10,has_elderly,0,0,.0706914479999106,.0044013099
+hhs_wt,oopg,total,.1,che_oopg_tot10,has_elderly,1,1,.0848039964767666,.007169981
+hhs_wt,oopg,total,.1,che_oopg_tot10,has_disabled_member,0,0,.0727843725931809,.0040977406
+hhs_wt,oopg,total,.1,che_oopg_tot10,has_disabled_member,1,1,.0916522093794013,.013751289
+hhs_wt,oop,total,.1,che_oop_tot10,poor,0,0,.1758283184559116,.0062583354
+hhs_wt,oop,total,.1,che_oop_tot10,poor,1,1,.2292140778000989,.014993874
+hhs_wt,oop,total,.1,che_oop_tot10,quintile_pcep,1 (poorest),1,.2299234270612849,.015132822
+hhs_wt,oop,total,.1,che_oop_tot10,quintile_pcep,2,2,.217736207065664,.013150425
+hhs_wt,oop,total,.1,che_oop_tot10,quintile_pcep,3,3,.1857356271077326,.011734901
+hhs_wt,oop,total,.1,che_oop_tot10,quintile_pcep,4,4,.181114047360417,.010862392
+hhs_wt,oop,total,.1,che_oop_tot10,quintile_pcep,5 (richest),5,.1327774423816197,.010119636
+hhs_wt,oop,total,.1,che_oop_tot10,prov,Koshi,1,.1647947829623831,.012090734
+hhs_wt,oop,total,.1,che_oop_tot10,prov,Madhesh,2,.2582289779793496,.025872275
+hhs_wt,oop,total,.1,che_oop_tot10,prov,Bagmati,3,.1385395632749167,.01132264
+hhs_wt,oop,total,.1,che_oop_tot10,prov,Gandaki,4,.1461266062587494,.013121773
+hhs_wt,oop,total,.1,che_oop_tot10,prov,Lumbini,5,.1827874058319577,.016197717
+hhs_wt,oop,total,.1,che_oop_tot10,prov,Karnali,6,.2145549883299799,.016917134
+hhs_wt,oop,total,.1,che_oop_tot10,prov,Sudurpaschim,7,.2169886335630482,.01812385
+hhs_wt,oop,total,.1,che_oop_tot10,ad_4,Kathmandu,1,.1166131502520607,.017669993
+hhs_wt,oop,total,.1,che_oop_tot10,ad_4,Other urban,2,.1834606390084295,.0087663718
+hhs_wt,oop,total,.1,che_oop_tot10,ad_4,Rural,3,.2138494080863498,.0095976498
+hhs_wt,oop,total,.1,che_oop_tot10,caste_ethnicity,Hill Caste,11,.1847672553511859,.0090372842
+hhs_wt,oop,total,.1,che_oop_tot10,caste_ethnicity,Madhesh/Tarai Caste,12,.2549479905806276,.016399076
+hhs_wt,oop,total,.1,che_oop_tot10,caste_ethnicity,Mountain/Hill Janajati,21,.1403557480410559,.0089810556
+hhs_wt,oop,total,.1,che_oop_tot10,caste_ethnicity,Tarai Janajati,22,.1207404847943288,.019224757
+hhs_wt,oop,total,.1,che_oop_tot10,caste_ethnicity,Hill Dalit,31,.2222508193903708,.01877241
+hhs_wt,oop,total,.1,che_oop_tot10,caste_ethnicity,Madhesh/Tarai Dalit,32,.2677533436058466,.035423663
+hhs_wt,oop,total,.1,che_oop_tot10,caste_ethnicity,Religions/Linguistic group,40,.2250029055701269,.024265343
+hhs_wt,oop,total,.1,che_oop_tot10,caste_ethnicity,Others & Not stated,50,.4817120459535468,.16503365
+hhs_wt,oop,total,.1,che_oop_tot10,head_edu_n,No education,0,.2334572741360777,.011146308
+hhs_wt,oop,total,.1,che_oop_tot10,head_edu_n,Informal/literate,1,.1825121699588709,.025176965
+hhs_wt,oop,total,.1,che_oop_tot10,head_edu_n,Primary (1-5),2,.1874262376802902,.010426303
+hhs_wt,oop,total,.1,che_oop_tot10,head_edu_n,Lower secondary (6-8),3,.1678040498325195,.013454048
+hhs_wt,oop,total,.1,che_oop_tot10,head_edu_n,Secondary (9-SLC),4,.1665366735528532,.011075049
+hhs_wt,oop,total,.1,che_oop_tot10,head_edu_n,Higher secondary,5,.1304677877464767,.012927839
+hhs_wt,oop,total,.1,che_oop_tot10,head_edu_n,Bachelor and above,6,.1283558066757776,.017186148
+hhs_wt,oop,total,.1,che_oop_tot10,has_elderly,0,0,.1603182465409877,.0060757161
+hhs_wt,oop,total,.1,che_oop_tot10,has_elderly,1,1,.2646040145162482,.012526534
+hhs_wt,oop,total,.1,che_oop_tot10,has_disabled_member,0,0,.174747661728273,.0060657728
+hhs_wt,oop,total,.1,che_oop_tot10,has_disabled_member,1,1,.3303119140625906,.030403087
+hhs_wt,oopg,total,.2,che_oopg_tot20,poor,0,0,.0237911295664533,.0020844506
+hhs_wt,oopg,total,.2,che_oopg_tot20,poor,1,1,.0406691518373672,.006621046
+hhs_wt,oopg,total,.2,che_oopg_tot20,quintile_pcep,1 (poorest),1,.041205526205831,.0067087049
+hhs_wt,oopg,total,.2,che_oopg_tot20,quintile_pcep,2,2,.0370224499506966,.005468125
+hhs_wt,oopg,total,.2,che_oopg_tot20,quintile_pcep,3,3,.0294221665513199,.0048835455
+hhs_wt,oopg,total,.2,che_oopg_tot20,quintile_pcep,4,4,.0204024088130288,.0039013335
+hhs_wt,oopg,total,.2,che_oopg_tot20,quintile_pcep,5 (richest),5,.0123175363584194,.0024032996
+hhs_wt,oopg,total,.2,che_oopg_tot20,prov,Koshi,1,.0276952212647047,.0046425746
+hhs_wt,oopg,total,.2,che_oopg_tot20,prov,Madhesh,2,.0511964024670264,.0095908856
+hhs_wt,oopg,total,.2,che_oopg_tot20,prov,Bagmati,3,.0178346557099344,.0035756014
+hhs_wt,oopg,total,.2,che_oopg_tot20,prov,Gandaki,4,.0197763399324927,.0038106544
+hhs_wt,oopg,total,.2,che_oopg_tot20,prov,Lumbini,5,.0126448055430437,.0036346279
+hhs_wt,oopg,total,.2,che_oopg_tot20,prov,Karnali,6,.0386313923093932,.0068119345
+hhs_wt,oopg,total,.2,che_oopg_tot20,prov,Sudurpaschim,7,.024782642915101,.0052265469
+hhs_wt,oopg,total,.2,che_oopg_tot20,ad_4,Kathmandu,1,.011397330961812,.0053673531
+hhs_wt,oopg,total,.2,che_oopg_tot20,ad_4,Other urban,2,.0283710421506232,.0029563447
+hhs_wt,oopg,total,.2,che_oopg_tot20,ad_4,Rural,3,.0291476377999652,.0041369158
+hhs_wt,oopg,total,.2,che_oopg_tot20,caste_ethnicity,Hill Caste,11,.0240888464660272,.0032779197
+hhs_wt,oopg,total,.2,che_oopg_tot20,caste_ethnicity,Madhesh/Tarai Caste,12,.0408476168973203,.0087881545
+hhs_wt,oopg,total,.2,che_oopg_tot20,caste_ethnicity,Mountain/Hill Janajati,21,.0190929377747335,.0031015852
+hhs_wt,oopg,total,.2,che_oopg_tot20,caste_ethnicity,Tarai Janajati,22,.0198032095862795,.0056495159
+hhs_wt,oopg,total,.2,che_oopg_tot20,caste_ethnicity,Hill Dalit,31,.0214586379570986,.0043653548
+hhs_wt,oopg,total,.2,che_oopg_tot20,caste_ethnicity,Madhesh/Tarai Dalit,32,.0598469750827302,.014943959
+hhs_wt,oopg,total,.2,che_oopg_tot20,caste_ethnicity,Religions/Linguistic group,40,.0445568412091403,.01258172
+hhs_wt,oopg,total,.2,che_oopg_tot20,caste_ethnicity,Others & Not stated,50,.0694898010249617,.045331012
+hhs_wt,oopg,total,.2,che_oopg_tot20,head_edu_n,No education,0,.0405316379079375,.0048678597
+hhs_wt,oopg,total,.2,che_oopg_tot20,head_edu_n,Informal/literate,1,.0242141315294407,.010540784
+hhs_wt,oopg,total,.2,che_oopg_tot20,head_edu_n,Primary (1-5),2,.0246336881844492,.0038815395
+hhs_wt,oopg,total,.2,che_oopg_tot20,head_edu_n,Lower secondary (6-8),3,.0240862027553738,.0048247231
+hhs_wt,oopg,total,.2,che_oopg_tot20,head_edu_n,Secondary (9-SLC),4,.0150261607858875,.0028612488
+hhs_wt,oopg,total,.2,che_oopg_tot20,head_edu_n,Higher secondary,5,.0250536195545967,.0061761434
+hhs_wt,oopg,total,.2,che_oopg_tot20,head_edu_n,Bachelor and above,6,.0181529935330395,.0096709765
+hhs_wt,oopg,total,.2,che_oopg_tot20,has_elderly,0,0,.0256723030852347,.0023656806
+hhs_wt,oopg,total,.2,che_oopg_tot20,has_elderly,1,1,.0296676817854744,.0044996915
+hhs_wt,oopg,total,.2,che_oopg_tot20,has_disabled_member,0,0,.0255108026279782,.0021077252
+hhs_wt,oopg,total,.2,che_oopg_tot20,has_disabled_member,1,1,.0425940359763833,.0095868763
+hhs_wt,oop,total,.2,che_oop_tot20,poor,0,0,.0701162248049761,.0039286814
+hhs_wt,oop,total,.2,che_oop_tot20,poor,1,1,.117527738551475,.011268439
+hhs_wt,oop,total,.2,che_oop_tot20,quintile_pcep,1 (poorest),1,.1178671183543331,.011389636
+hhs_wt,oop,total,.2,che_oop_tot20,quintile_pcep,2,2,.0906643767509185,.0079204943
+hhs_wt,oop,total,.2,che_oop_tot20,quintile_pcep,3,3,.0816311113979899,.0075551695
+hhs_wt,oop,total,.2,che_oop_tot20,quintile_pcep,4,4,.0687960506303496,.0067392341
+hhs_wt,oop,total,.2,che_oop_tot20,quintile_pcep,5 (richest),5,.0472574337548658,.004975751
+hhs_wt,oop,total,.2,che_oop_tot20,prov,Koshi,1,.0788338287327753,.0085458197
+hhs_wt,oop,total,.2,che_oop_tot20,prov,Madhesh,2,.1154149671612117,.018023754
+hhs_wt,oop,total,.2,che_oop_tot20,prov,Bagmati,3,.0553004767302293,.0069266437
+hhs_wt,oop,total,.2,che_oop_tot20,prov,Gandaki,4,.0573831390142288,.0072995895
+hhs_wt,oop,total,.2,che_oop_tot20,prov,Lumbini,5,.0652600854840633,.0079515632
+hhs_wt,oop,total,.2,che_oop_tot20,prov,Karnali,6,.0889436250310151,.011310054
+hhs_wt,oop,total,.2,che_oop_tot20,prov,Sudurpaschim,7,.1007841116337481,.010183408
+hhs_wt,oop,total,.2,che_oop_tot20,ad_4,Kathmandu,1,.0309231529028875,.0080461474
+hhs_wt,oop,total,.2,che_oop_tot20,ad_4,Other urban,2,.0766664236797272,.0055343043
+hhs_wt,oop,total,.2,che_oop_tot20,ad_4,Rural,3,.0990845074681115,.0073720906
+hhs_wt,oop,total,.2,che_oop_tot20,caste_ethnicity,Hill Caste,11,.0815448665956374,.0060096816
+hhs_wt,oop,total,.2,che_oop_tot20,caste_ethnicity,Madhesh/Tarai Caste,12,.1225470311833168,.013555855
+hhs_wt,oop,total,.2,che_oop_tot20,caste_ethnicity,Mountain/Hill Janajati,21,.0558251479736614,.0053562629
+hhs_wt,oop,total,.2,che_oop_tot20,caste_ethnicity,Tarai Janajati,22,.0442002169098591,.0089639062
+hhs_wt,oop,total,.2,che_oop_tot20,caste_ethnicity,Hill Dalit,31,.0802042455995667,.009672855
+hhs_wt,oop,total,.2,che_oop_tot20,caste_ethnicity,Madhesh/Tarai Dalit,32,.1165907190034654,.019736283
+hhs_wt,oop,total,.2,che_oop_tot20,caste_ethnicity,Religions/Linguistic group,40,.0906498739050677,.01539684
+hhs_wt,oop,total,.2,che_oop_tot20,caste_ethnicity,Others & Not stated,50,.1389796020499235,.090662025
+hhs_wt,oop,total,.2,che_oop_tot20,head_edu_n,No education,0,.1151866394065745,.0078729158
+hhs_wt,oop,total,.2,che_oop_tot20,head_edu_n,Informal/literate,1,.0752172635886547,.016341291
+hhs_wt,oop,total,.2,che_oop_tot20,head_edu_n,Primary (1-5),2,.0740115025825463,.0066884561
+hhs_wt,oop,total,.2,che_oop_tot20,head_edu_n,Lower secondary (6-8),3,.066685281599877,.008010434
+hhs_wt,oop,total,.2,che_oop_tot20,head_edu_n,Secondary (9-SLC),4,.0578130045917041,.0059822351
+hhs_wt,oop,total,.2,che_oop_tot20,head_edu_n,Higher secondary,5,.0491401308849349,.0081019308
+hhs_wt,oop,total,.2,che_oop_tot20,head_edu_n,Bachelor and above,6,.0581238135050803,.013843954
+hhs_wt,oop,total,.2,che_oop_tot20,has_elderly,0,0,.0659635069732765,.0040417206
+hhs_wt,oop,total,.2,che_oop_tot20,has_elderly,1,1,.1174886914739546,.0086888792
+hhs_wt,oop,total,.2,che_oop_tot20,has_disabled_member,0,0,.0704491173935122,.0037740339
+hhs_wt,oop,total,.2,che_oop_tot20,has_disabled_member,1,1,.1884761408263557,.02215554
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,poor,0,0,.0440224519849074,.0030343505
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,poor,1,1,.0787145004298251,.0092722373
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,quintile_pcep,1 (poorest),1,.0797526445402758,.0093933586
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,quintile_pcep,2,2,.0642517446747318,.0073096673
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,quintile_pcep,3,3,.0572671415217914,.006554679
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,quintile_pcep,4,4,.0371414946136774,.0051721567
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,quintile_pcep,5 (richest),5,.0241882904816783,.0035216801
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,prov,Koshi,1,.0414941526544482,.0061062267
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,prov,Madhesh,2,.0766581116900559,.012922727
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,prov,Bagmati,3,.0500138723106201,.0061216769
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,prov,Gandaki,4,.0480095123963353,.0070534456
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,prov,Lumbini,5,.0320618006575423,.0058716838
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,prov,Karnali,6,.0480836656079743,.007614505
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,prov,Sudurpaschim,7,.0490260819018144,.0078083361
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,ad_4,Kathmandu,1,.0603884682127187,.01053653
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,ad_4,Other urban,2,.051966468669255,.0045418469
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,ad_4,Rural,3,.0415107222510265,.0043858849
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,caste_ethnicity,Hill Caste,11,.0454351673224922,.004355228
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,caste_ethnicity,Madhesh/Tarai Caste,12,.0708743171471791,.0099632628
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,caste_ethnicity,Mountain/Hill Janajati,21,.0407497427259383,.0049867979
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,caste_ethnicity,Tarai Janajati,22,.033527334608747,.0074044755
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,caste_ethnicity,Hill Dalit,31,.0499392796174764,.0079012215
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,caste_ethnicity,Madhesh/Tarai Dalit,32,.0986083000423753,.02168273
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,caste_ethnicity,Religions/Linguistic group,40,.0635453181911143,.016639333
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,caste_ethnicity,Others & Not stated,50,.0694898010249617,.045331012
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,head_edu_n,No education,0,.0696821213856762,.0069947424
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,head_edu_n,Informal/literate,1,.0449084458541455,.013414975
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,head_edu_n,Primary (1-5),2,.0500844234029725,.0060347393
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,head_edu_n,Lower secondary (6-8),3,.0450137240711109,.0070843673
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,head_edu_n,Secondary (9-SLC),4,.0357742114743175,.0047049196
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,head_edu_n,Higher secondary,5,.0411324763490934,.0076900655
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,head_edu_n,Bachelor and above,6,.0309644220112151,.011017323
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,has_elderly,0,0,.0456949420050516,.0033129898
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,has_elderly,1,1,.0632777354455465,.0063816025
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,has_disabled_member,0,0,.0479096911663868,.0031223695
+hhs_wt,oopg,nonfood,.25,che_oopg_nf25,has_disabled_member,1,1,.0775340562721544,.012543606
+hhs_wt,oop,nonfood,.25,che_oop_nf25,poor,0,0,.1314125852085077,.0053427946
+hhs_wt,oop,nonfood,.25,che_oop_nf25,poor,1,1,.199216517409102,.014579029
+hhs_wt,oop,nonfood,.25,che_oop_nf25,quintile_pcep,1 (poorest),1,.200397698732983,.014746021
+hhs_wt,oop,nonfood,.25,che_oop_nf25,quintile_pcep,2,2,.1701643190290868,.011317719
+hhs_wt,oop,nonfood,.25,che_oop_nf25,quintile_pcep,3,3,.1525998584350497,.010658917
+hhs_wt,oop,nonfood,.25,che_oop_nf25,quintile_pcep,4,4,.1284426154960544,.010148156
+hhs_wt,oop,nonfood,.25,che_oop_nf25,quintile_pcep,5 (richest),5,.0885813133340589,.009395998
+hhs_wt,oop,nonfood,.25,che_oop_nf25,prov,Koshi,1,.1248326151177467,.012071879
+hhs_wt,oop,nonfood,.25,che_oop_nf25,prov,Madhesh,2,.1657182817141652,.016720027
+hhs_wt,oop,nonfood,.25,che_oop_nf25,prov,Bagmati,3,.1443868984443846,.011160827
+hhs_wt,oop,nonfood,.25,che_oop_nf25,prov,Gandaki,4,.1164470252932878,.012485405
+hhs_wt,oop,nonfood,.25,che_oop_nf25,prov,Lumbini,5,.1354998965474133,.014158122
+hhs_wt,oop,nonfood,.25,che_oop_nf25,prov,Karnali,6,.1369006350331722,.014423435
+hhs_wt,oop,nonfood,.25,che_oop_nf25,prov,Sudurpaschim,7,.1745919254969175,.015147101
+hhs_wt,oop,nonfood,.25,che_oop_nf25,ad_4,Kathmandu,1,.1552752764254741,.017373644
+hhs_wt,oop,nonfood,.25,che_oop_nf25,ad_4,Other urban,2,.143606422416352,.0076377974
+hhs_wt,oop,nonfood,.25,che_oop_nf25,ad_4,Rural,3,.1361233047805009,.0079219788
+hhs_wt,oop,nonfood,.25,che_oop_nf25,caste_ethnicity,Hill Caste,11,.1492701138614533,.0084339846
+hhs_wt,oop,nonfood,.25,che_oop_nf25,caste_ethnicity,Madhesh/Tarai Caste,12,.1790382176173497,.015328922
+hhs_wt,oop,nonfood,.25,che_oop_nf25,caste_ethnicity,Mountain/Hill Janajati,21,.1218067337441218,.0086520016
+hhs_wt,oop,nonfood,.25,che_oop_nf25,caste_ethnicity,Tarai Janajati,22,.083812526740031,.01444041
+hhs_wt,oop,nonfood,.25,che_oop_nf25,caste_ethnicity,Hill Dalit,31,.1733422965606162,.01827999
+hhs_wt,oop,nonfood,.25,che_oop_nf25,caste_ethnicity,Madhesh/Tarai Dalit,32,.18486179319765,.029510461
+hhs_wt,oop,nonfood,.25,che_oop_nf25,caste_ethnicity,Religions/Linguistic group,40,.13460673927981,.022031361
+hhs_wt,oop,nonfood,.25,che_oop_nf25,caste_ethnicity,Others & Not stated,50,.277959204099847,.18132405
+hhs_wt,oop,nonfood,.25,che_oop_nf25,head_edu_n,No education,0,.1875140256686074,.0099329147
+hhs_wt,oop,nonfood,.25,che_oop_nf25,head_edu_n,Informal/literate,1,.1442083821852018,.023150157
+hhs_wt,oop,nonfood,.25,che_oop_nf25,head_edu_n,Primary (1-5),2,.1542758490526109,.010310356
+hhs_wt,oop,nonfood,.25,che_oop_nf25,head_edu_n,Lower secondary (6-8),3,.1167836525335907,.010624567
+hhs_wt,oop,nonfood,.25,che_oop_nf25,head_edu_n,Secondary (9-SLC),4,.1227121386368177,.0093468986
+hhs_wt,oop,nonfood,.25,che_oop_nf25,head_edu_n,Higher secondary,5,.1040300778680039,.012112812
+hhs_wt,oop,nonfood,.25,che_oop_nf25,head_edu_n,Bachelor and above,6,.077175362666096,.014046025
+hhs_wt,oop,nonfood,.25,che_oop_nf25,has_elderly,0,0,.1208314498384346,.0049973768
+hhs_wt,oop,nonfood,.25,che_oop_nf25,has_elderly,1,1,.2143436716180012,.011665938
+hhs_wt,oop,nonfood,.25,che_oop_nf25,has_disabled_member,0,0,.1324445781577341,.0051025189
+hhs_wt,oop,nonfood,.25,che_oop_nf25,has_disabled_member,1,1,.2925801329244122,.028378854
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,poor,0,0,.0180244182670325,.001817152
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,poor,1,1,.0395089496105148,.0067359167
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,quintile_pcep,1 (poorest),1,.0400300223877577,.0068274522
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,quintile_pcep,2,2,.0251350844859281,.0043799989
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,quintile_pcep,3,3,.0217814978211332,.0038622292
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,quintile_pcep,4,4,.0190778375593743,.0038177227
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,quintile_pcep,5 (richest),5,.0087832528659817,.0020788671
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,prov,Koshi,1,.0230679882446566,.0045593674
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,prov,Madhesh,2,.0312755020418945,.007125359
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,prov,Bagmati,3,.0226313007580011,.0039238697
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,prov,Gandaki,4,.022179527590011,.0046103126
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,prov,Lumbini,5,.010095909247883,.0033626328
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,prov,Karnali,6,.0232395770039871,.0051756361
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,prov,Sudurpaschim,7,.0183607742483017,.0045725713
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,ad_4,Kathmandu,1,.022059653628508,.0064173983
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,ad_4,Other urban,2,.0227668143565076,.0026948871
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,ad_4,Rural,3,.0191973336171662,.003015263
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,caste_ethnicity,Hill Caste,11,.0199725666248349,.0030565145
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,caste_ethnicity,Madhesh/Tarai Caste,12,.0273275572390655,.0068133166
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,caste_ethnicity,Mountain/Hill Janajati,21,.0194187817946738,.0032865806
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,caste_ethnicity,Tarai Janajati,22,.0141508247838029,.004916471
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,caste_ethnicity,Hill Dalit,31,.0227200961296399,.004783845
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,caste_ethnicity,Madhesh/Tarai Dalit,32,.0404766959605204,.013023398
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,caste_ethnicity,Religions/Linguistic group,40,.0248067651162074,.0093078502
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,caste_ethnicity,Others & Not stated,50,.0694898010249617,.045331012
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,head_edu_n,No education,0,.0298884831519407,.0038906347
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,head_edu_n,Informal/literate,1,.0194605547653852,.0099532809
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,head_edu_n,Primary (1-5),2,.0189054950284282,.0033589471
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,head_edu_n,Lower secondary (6-8),3,.02125649786808,.0046632038
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,head_edu_n,Secondary (9-SLC),4,.0140618850357084,.0027915281
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,head_edu_n,Higher secondary,5,.0233096683135088,.0062287175
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,head_edu_n,Bachelor and above,6,.0183354034106699,.0097108195
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,has_elderly,0,0,.0202571378503426,.0021413558
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,has_elderly,1,1,.0260343039660698,.0036839207
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,has_disabled_member,0,0,.020677624347228,.0018987342
+hhs_wt,oopg,nonfood,.4,che_oopg_nf40,has_disabled_member,1,1,.0351951558207026,.0087158978
+hhs_wt,oop,nonfood,.4,che_oop_nf40,poor,0,0,.0681146388157062,.0039233672
+hhs_wt,oop,nonfood,.4,che_oop_nf40,poor,1,1,.1136438769124674,.011217614
+hhs_wt,oop,nonfood,.4,che_oop_nf40,quintile_pcep,1 (poorest),1,.1136964639841815,.011335021
+hhs_wt,oop,nonfood,.4,che_oop_nf40,quintile_pcep,2,2,.085313518009962,.0078752674
+hhs_wt,oop,nonfood,.4,che_oop_nf40,quintile_pcep,3,3,.0794411857438042,.0072037093
+hhs_wt,oop,nonfood,.4,che_oop_nf40,quintile_pcep,4,4,.0762321793461486,.0079699531
+hhs_wt,oop,nonfood,.4,che_oop_nf40,quintile_pcep,5 (richest),5,.0399890996375751,.0046165609
+hhs_wt,oop,nonfood,.4,che_oop_nf40,prov,Koshi,1,.0719419895668525,.0088782273
+hhs_wt,oop,nonfood,.4,che_oop_nf40,prov,Madhesh,2,.0782667235946228,.012820197
+hhs_wt,oop,nonfood,.4,che_oop_nf40,prov,Bagmati,3,.0834647256633829,.0088407798
+hhs_wt,oop,nonfood,.4,che_oop_nf40,prov,Gandaki,4,.0661165231787538,.0085837292
+hhs_wt,oop,nonfood,.4,che_oop_nf40,prov,Lumbini,5,.0632104174349371,.0078267343
+hhs_wt,oop,nonfood,.4,che_oop_nf40,prov,Karnali,6,.0742269251974455,.010850684
+hhs_wt,oop,nonfood,.4,che_oop_nf40,prov,Sudurpaschim,7,.0978342900245713,.010383586
+hhs_wt,oop,nonfood,.4,che_oop_nf40,ad_4,Kathmandu,1,.0799597677959064,.013467075
+hhs_wt,oop,nonfood,.4,che_oop_nf40,ad_4,Other urban,2,.075034509599882,.0056432057
+hhs_wt,oop,nonfood,.4,che_oop_nf40,ad_4,Rural,3,.075363550584596,.0053816088
+hhs_wt,oop,nonfood,.4,che_oop_nf40,caste_ethnicity,Hill Caste,11,.0829533911900235,.0060774023
+hhs_wt,oop,nonfood,.4,che_oop_nf40,caste_ethnicity,Madhesh/Tarai Caste,12,.088984181610826,.010337374
+hhs_wt,oop,nonfood,.4,che_oop_nf40,caste_ethnicity,Mountain/Hill Janajati,21,.0636198543124334,.0060100378
+hhs_wt,oop,nonfood,.4,che_oop_nf40,caste_ethnicity,Tarai Janajati,22,.0426413981196586,.0089043295
+hhs_wt,oop,nonfood,.4,che_oop_nf40,caste_ethnicity,Hill Dalit,31,.0929486448132994,.010656103
+hhs_wt,oop,nonfood,.4,che_oop_nf40,caste_ethnicity,Madhesh/Tarai Dalit,32,.1022611931210302,.020068599
+hhs_wt,oop,nonfood,.4,che_oop_nf40,caste_ethnicity,Religions/Linguistic group,40,.0683997047085298,.014858725
+hhs_wt,oop,nonfood,.4,che_oop_nf40,caste_ethnicity,Others & Not stated,50,.0694898010249617,.045331012
+hhs_wt,oop,nonfood,.4,che_oop_nf40,head_edu_n,No education,0,.1101748001619093,.0076172333
+hhs_wt,oop,nonfood,.4,che_oop_nf40,head_edu_n,Informal/literate,1,.0700647961905486,.015695503
+hhs_wt,oop,nonfood,.4,che_oop_nf40,head_edu_n,Primary (1-5),2,.0744324933584227,.0070743505
+hhs_wt,oop,nonfood,.4,che_oop_nf40,head_edu_n,Lower secondary (6-8),3,.0661771341212689,.0081044286
+hhs_wt,oop,nonfood,.4,che_oop_nf40,head_edu_n,Secondary (9-SLC),4,.0563285108569235,.0062421444
+hhs_wt,oop,nonfood,.4,che_oop_nf40,head_edu_n,Higher secondary,5,.0577260903567629,.0099715292
+hhs_wt,oop,nonfood,.4,che_oop_nf40,head_edu_n,Bachelor and above,6,.0376210114319109,.011718265
+hhs_wt,oop,nonfood,.4,che_oop_nf40,has_elderly,0,0,.0627836942750516,.0038795895
+hhs_wt,oop,nonfood,.4,che_oop_nf40,has_elderly,1,1,.1179990964337341,.0084300134
+hhs_wt,oop,nonfood,.4,che_oop_nf40,has_disabled_member,0,0,.0676098382571525,.003717853
+hhs_wt,oop,nonfood,.4,che_oop_nf40,has_disabled_member,1,1,.1937897636045262,.022670459
+ind_wt,oopg,total,.1,che_oopg_tot10,poor,0,0,.0710564962001132,.0047408212
+ind_wt,oopg,total,.1,che_oopg_tot10,poor,1,1,.1058065465334055,.011490352
+ind_wt,oopg,total,.1,che_oopg_tot10,quintile_pcep,1 (poorest),1,.1070981272682333,.011641888
+ind_wt,oopg,total,.1,che_oopg_tot10,quintile_pcep,2,2,.1034578977659792,.011723779
+ind_wt,oopg,total,.1,che_oopg_tot10,quintile_pcep,3,3,.076003897593728,.0082909446
+ind_wt,oopg,total,.1,che_oopg_tot10,quintile_pcep,4,4,.0664783513463947,.007673834
+ind_wt,oopg,total,.1,che_oopg_tot10,quintile_pcep,5 (richest),5,.037425710414841,.0045564543
+ind_wt,oopg,total,.1,che_oopg_tot10,prov,Koshi,1,.0632854446820182,.0082982276
+ind_wt,oopg,total,.1,che_oopg_tot10,prov,Madhesh,2,.1433233673991086,.021978192
+ind_wt,oopg,total,.1,che_oopg_tot10,prov,Bagmati,3,.0545630329025874,.0067878948
+ind_wt,oopg,total,.1,che_oopg_tot10,prov,Gandaki,4,.0630688798983697,.010144376
+ind_wt,oopg,total,.1,che_oopg_tot10,prov,Lumbini,5,.0496115531908366,.00714408
+ind_wt,oopg,total,.1,che_oopg_tot10,prov,Karnali,6,.074015166731478,.0098449076
+ind_wt,oopg,total,.1,che_oopg_tot10,prov,Sudurpaschim,7,.0704124452192503,.0094579505
+ind_wt,oopg,total,.1,che_oopg_tot10,ad_4,Kathmandu,1,.047312761511401,.0095873466
+ind_wt,oopg,total,.1,che_oopg_tot10,ad_4,Other urban,2,.08015417617658,.0073040822
+ind_wt,oopg,total,.1,che_oopg_tot10,ad_4,Rural,3,.0849972356737276,.0079484433
+ind_wt,oopg,total,.1,che_oopg_tot10,caste_ethnicity,Hill Caste,11,.0657378858387002,.0055160173
+ind_wt,oopg,total,.1,che_oopg_tot10,caste_ethnicity,Madhesh/Tarai Caste,12,.1245819714017785,.015849425
+ind_wt,oopg,total,.1,che_oopg_tot10,caste_ethnicity,Mountain/Hill Janajati,21,.0494695447380365,.0056832121
+ind_wt,oopg,total,.1,che_oopg_tot10,caste_ethnicity,Tarai Janajati,22,.046335730784103,.0096937642
+ind_wt,oopg,total,.1,che_oopg_tot10,caste_ethnicity,Hill Dalit,31,.0720844715595111,.010063538
+ind_wt,oopg,total,.1,che_oopg_tot10,caste_ethnicity,Madhesh/Tarai Dalit,32,.1717283632643567,.031975728
+ind_wt,oopg,total,.1,che_oopg_tot10,caste_ethnicity,Religions/Linguistic group,40,.1338907062368858,.027792839
+ind_wt,oopg,total,.1,che_oopg_tot10,caste_ethnicity,Others & Not stated,50,.1756306943927379,.11074285
+ind_wt,oopg,total,.1,che_oopg_tot10,head_edu_n,No education,0,.1113250578374954,.010805453
+ind_wt,oopg,total,.1,che_oopg_tot10,head_edu_n,Informal/literate,1,.0632559101075365,.018751783
+ind_wt,oopg,total,.1,che_oopg_tot10,head_edu_n,Primary (1-5),2,.0712219889050724,.0078407517
+ind_wt,oopg,total,.1,che_oopg_tot10,head_edu_n,Lower secondary (6-8),3,.0683022293039005,.0092915101
+ind_wt,oopg,total,.1,che_oopg_tot10,head_edu_n,Secondary (9-SLC),4,.0673077406967099,.0080338074
+ind_wt,oopg,total,.1,che_oopg_tot10,head_edu_n,Higher secondary,5,.0470450763383928,.00833009
+ind_wt,oopg,total,.1,che_oopg_tot10,head_edu_n,Bachelor and above,6,.048780027426134,.010990223
+ind_wt,oopg,total,.1,che_oopg_tot10,has_elderly,0,0,.0731914666531447,.005164661
+ind_wt,oopg,total,.1,che_oopg_tot10,has_elderly,1,1,.0918796630812851,.0098848036
+ind_wt,oopg,total,.1,che_oopg_tot10,has_disabled_member,0,0,.077516809057513,.0050673047
+ind_wt,oopg,total,.1,che_oopg_tot10,has_disabled_member,1,1,.0855158477485828,.01528471
+ind_wt,oop,total,.1,che_oop_tot10,poor,0,0,.1775191275845366,.0068236063
+ind_wt,oop,total,.1,che_oop_tot10,poor,1,1,.2282477405964484,.016095363
+ind_wt,oop,total,.1,che_oop_tot10,quintile_pcep,1 (poorest),1,.2289210653119754,.016256884
+ind_wt,oop,total,.1,che_oop_tot10,quintile_pcep,2,2,.2211373758587244,.014539954
+ind_wt,oop,total,.1,che_oop_tot10,quintile_pcep,3,3,.1797659490012917,.012443751
+ind_wt,oop,total,.1,che_oop_tot10,quintile_pcep,4,4,.1714288843664014,.011379853
+ind_wt,oop,total,.1,che_oop_tot10,quintile_pcep,5 (richest),5,.1377081964468853,.019789821
+ind_wt,oop,total,.1,che_oop_tot10,prov,Koshi,1,.1651324659592431,.012460637
+ind_wt,oop,total,.1,che_oop_tot10,prov,Madhesh,2,.2655116111693026,.021257363
+ind_wt,oop,total,.1,che_oop_tot10,prov,Bagmati,3,.135973378189014,.012299273
+ind_wt,oop,total,.1,che_oop_tot10,prov,Gandaki,4,.1376838129086927,.01405305
+ind_wt,oop,total,.1,che_oop_tot10,prov,Lumbini,5,.1778234842019769,.016070224
+ind_wt,oop,total,.1,che_oop_tot10,prov,Karnali,6,.2053424276003695,.016959101
+ind_wt,oop,total,.1,che_oop_tot10,prov,Sudurpaschim,7,.2107073379889475,.017754134
+ind_wt,oop,total,.1,che_oop_tot10,ad_4,Kathmandu,1,.1185180231407649,.018349785
+ind_wt,oop,total,.1,che_oop_tot10,ad_4,Other urban,2,.1881903571037432,.0087301694
+ind_wt,oop,total,.1,che_oop_tot10,ad_4,Rural,3,.2114644181260486,.010552137
+ind_wt,oop,total,.1,che_oop_tot10,caste_ethnicity,Hill Caste,11,.1780924055857429,.0092139998
+ind_wt,oop,total,.1,che_oop_tot10,caste_ethnicity,Madhesh/Tarai Caste,12,.2560835388440094,.018503567
+ind_wt,oop,total,.1,che_oop_tot10,caste_ethnicity,Mountain/Hill Janajati,21,.1394936210056174,.0099627329
+ind_wt,oop,total,.1,che_oop_tot10,caste_ethnicity,Tarai Janajati,22,.1226770894032129,.02080089
+ind_wt,oop,total,.1,che_oop_tot10,caste_ethnicity,Hill Dalit,31,.2343526056971739,.033311941
+ind_wt,oop,total,.1,che_oop_tot10,caste_ethnicity,Madhesh/Tarai Dalit,32,.2796984052951391,.042895325
+ind_wt,oop,total,.1,che_oop_tot10,caste_ethnicity,Religions/Linguistic group,40,.2236368411202663,.028410202
+ind_wt,oop,total,.1,che_oop_tot10,caste_ethnicity,Others & Not stated,50,.4355004873496223,.16374688
+ind_wt,oop,total,.1,che_oop_tot10,head_edu_n,No education,0,.2311268627096378,.013154089
+ind_wt,oop,total,.1,che_oop_tot10,head_edu_n,Informal/literate,1,.1662994668469278,.025998253
+ind_wt,oop,total,.1,che_oop_tot10,head_edu_n,Primary (1-5),2,.1932516263675971,.014996528
+ind_wt,oop,total,.1,che_oop_tot10,head_edu_n,Lower secondary (6-8),3,.1686958574159892,.014411919
+ind_wt,oop,total,.1,che_oop_tot10,head_edu_n,Secondary (9-SLC),4,.1726164905880896,.01287955
+ind_wt,oop,total,.1,che_oop_tot10,head_edu_n,Higher secondary,5,.1414548917034243,.015646579
+ind_wt,oop,total,.1,che_oop_tot10,head_edu_n,Bachelor and above,6,.1213303115081545,.016302044
+ind_wt,oop,total,.1,che_oop_tot10,has_elderly,0,0,.1647059848973759,.0062117917
+ind_wt,oop,total,.1,che_oop_tot10,has_elderly,1,1,.2526304349595541,.013422984
+ind_wt,oop,total,.1,che_oop_tot10,has_disabled_member,0,0,.1782969727168218,.0063783368
+ind_wt,oop,total,.1,che_oop_tot10,has_disabled_member,1,1,.3085569936819911,.030764515
+ind_wt,oopg,total,.2,che_oopg_tot20,poor,0,0,.0233510318784769,.0023821243
+ind_wt,oopg,total,.2,che_oopg_tot20,poor,1,1,.042026308742473,.0077249515
+ind_wt,oopg,total,.2,che_oopg_tot20,quintile_pcep,1 (poorest),1,.0425393239811905,.0078233276
+ind_wt,oopg,total,.2,che_oopg_tot20,quintile_pcep,2,2,.038492989216252,.0071573588
+ind_wt,oopg,total,.2,che_oopg_tot20,quintile_pcep,3,3,.0276315229726193,.0049744463
+ind_wt,oopg,total,.2,che_oopg_tot20,quintile_pcep,4,4,.0166822459652628,.0030641507
+ind_wt,oopg,total,.2,che_oopg_tot20,quintile_pcep,5 (richest),5,.0103115697795251,.0025042242
+ind_wt,oopg,total,.2,che_oopg_tot20,prov,Koshi,1,.0269144459496042,.0046277465
+ind_wt,oopg,total,.2,che_oopg_tot20,prov,Madhesh,2,.054509466427851,.012286763
+ind_wt,oopg,total,.2,che_oopg_tot20,prov,Bagmati,3,.0154594885099614,.0031749974
+ind_wt,oopg,total,.2,che_oopg_tot20,prov,Gandaki,4,.0204646686954986,.0044646305
+ind_wt,oopg,total,.2,che_oopg_tot20,prov,Lumbini,5,.0105669161954091,.0028469961
+ind_wt,oopg,total,.2,che_oopg_tot20,prov,Karnali,6,.0360848257853022,.0064318506
+ind_wt,oopg,total,.2,che_oopg_tot20,prov,Sudurpaschim,7,.0209097298986807,.0054014511
+ind_wt,oopg,total,.2,che_oopg_tot20,ad_4,Kathmandu,1,.0100003980853132,.0042279805
+ind_wt,oopg,total,.2,che_oopg_tot20,ad_4,Other urban,2,.0268258840293562,.0031839018
+ind_wt,oopg,total,.2,che_oopg_tot20,ad_4,Rural,3,.0337714112163641,.0071576913
+ind_wt,oopg,total,.2,che_oopg_tot20,caste_ethnicity,Hill Caste,11,.0219304669488764,.0030435722
+ind_wt,oopg,total,.2,che_oopg_tot20,caste_ethnicity,Madhesh/Tarai Caste,12,.0468825296172756,.013669909
+ind_wt,oopg,total,.2,che_oopg_tot20,caste_ethnicity,Mountain/Hill Janajati,21,.0187866779962291,.0030587704
+ind_wt,oopg,total,.2,che_oopg_tot20,caste_ethnicity,Tarai Janajati,22,.0168471670022769,.0054581463
+ind_wt,oopg,total,.2,che_oopg_tot20,caste_ethnicity,Hill Dalit,31,.0190664636798282,.0042335247
+ind_wt,oopg,total,.2,che_oopg_tot20,caste_ethnicity,Madhesh/Tarai Dalit,32,.0635334170050829,.016061233
+ind_wt,oopg,total,.2,che_oopg_tot20,caste_ethnicity,Religions/Linguistic group,40,.0371547872022086,.010434452
+ind_wt,oopg,total,.2,che_oopg_tot20,caste_ethnicity,Others & Not stated,50,.087815347196369,.055371426
+ind_wt,oopg,total,.2,che_oopg_tot20,head_edu_n,No education,0,.0442192951748017,.0072120489
+ind_wt,oopg,total,.2,che_oopg_tot20,head_edu_n,Informal/literate,1,.0311067630643531,.016104484
+ind_wt,oopg,total,.2,che_oopg_tot20,head_edu_n,Primary (1-5),2,.0220337395911902,.0037908817
+ind_wt,oopg,total,.2,che_oopg_tot20,head_edu_n,Lower secondary (6-8),3,.024171808785168,.0050017498
+ind_wt,oopg,total,.2,che_oopg_tot20,head_edu_n,Secondary (9-SLC),4,.0147642499105018,.0028718326
+ind_wt,oopg,total,.2,che_oopg_tot20,head_edu_n,Higher secondary,5,.0243985983248838,.0065919748
+ind_wt,oopg,total,.2,che_oopg_tot20,head_edu_n,Bachelor and above,6,.0125451060042877,.0060981167
+ind_wt,oopg,total,.2,che_oopg_tot20,has_elderly,0,0,.0262540985791625,.0026508959
+ind_wt,oopg,total,.2,che_oopg_tot20,has_elderly,1,1,.0296136969202655,.0070359893
+ind_wt,oopg,total,.2,che_oopg_tot20,has_disabled_member,0,0,.026010658811789,.0025997893
+ind_wt,oopg,total,.2,che_oopg_tot20,has_disabled_member,1,1,.0414408390412616,.012233842
+ind_wt,oop,total,.2,che_oop_tot20,poor,0,0,.0668001898916001,.0041889222
+ind_wt,oop,total,.2,che_oop_tot20,poor,1,1,.1156607204972935,.011922547
+ind_wt,oop,total,.2,che_oop_tot20,quintile_pcep,1 (poorest),1,.1155643458947563,.012029978
+ind_wt,oop,total,.2,che_oop_tot20,quintile_pcep,2,2,.0899953353413959,.0094070993
+ind_wt,oop,total,.2,che_oop_tot20,quintile_pcep,3,3,.0772682723327384,.0078016911
+ind_wt,oop,total,.2,che_oop_tot20,quintile_pcep,4,4,.0611735954666428,.006552991
+ind_wt,oop,total,.2,che_oop_tot20,quintile_pcep,5 (richest),5,.0394532953846703,.0049478197
+ind_wt,oop,total,.2,che_oop_tot20,prov,Koshi,1,.0807264423241714,.0093343277
+ind_wt,oop,total,.2,che_oop_tot20,prov,Madhesh,2,.1090169003773831,.018440302
+ind_wt,oop,total,.2,che_oop_tot20,prov,Bagmati,3,.0511435563230266,.0067480258
+ind_wt,oop,total,.2,che_oop_tot20,prov,Gandaki,4,.0555269632846461,.0076074046
+ind_wt,oop,total,.2,che_oop_tot20,prov,Lumbini,5,.0627728477102033,.008543008
+ind_wt,oop,total,.2,che_oop_tot20,prov,Karnali,6,.0802582316478366,.010628857
+ind_wt,oop,total,.2,che_oop_tot20,prov,Sudurpaschim,7,.0947011334073789,.010309502
+ind_wt,oop,total,.2,che_oop_tot20,ad_4,Kathmandu,1,.0318964929171617,.0075734849
+ind_wt,oop,total,.2,che_oop_tot20,ad_4,Other urban,2,.07389544512693,.0059655528
+ind_wt,oop,total,.2,che_oop_tot20,ad_4,Rural,3,.0978933278903466,.0092646126
+ind_wt,oop,total,.2,che_oop_tot20,caste_ethnicity,Hill Caste,11,.0775863692260106,.0060922997
+ind_wt,oop,total,.2,che_oop_tot20,caste_ethnicity,Madhesh/Tarai Caste,12,.1168354314690938,.016254548
+ind_wt,oop,total,.2,che_oop_tot20,caste_ethnicity,Mountain/Hill Janajati,21,.056952381385019,.0059818132
+ind_wt,oop,total,.2,che_oop_tot20,caste_ethnicity,Tarai Janajati,22,.0407696647748,.0092824344
+ind_wt,oop,total,.2,che_oop_tot20,caste_ethnicity,Hill Dalit,31,.0740507453502633,.0097307358
+ind_wt,oop,total,.2,che_oop_tot20,caste_ethnicity,Madhesh/Tarai Dalit,32,.1125506609037147,.020242391
+ind_wt,oop,total,.2,che_oop_tot20,caste_ethnicity,Religions/Linguistic group,40,.0898670381707612,.017264096
+ind_wt,oop,total,.2,che_oop_tot20,caste_ethnicity,Others & Not stated,50,.1580676213388189,.099668562
+ind_wt,oop,total,.2,che_oop_tot20,head_edu_n,No education,0,.1110456318711079,.0093516409
+ind_wt,oop,total,.2,che_oop_tot20,head_edu_n,Informal/literate,1,.0833793302156475,.021197118
+ind_wt,oop,total,.2,che_oop_tot20,head_edu_n,Primary (1-5),2,.0688449676129133,.007152393
+ind_wt,oop,total,.2,che_oop_tot20,head_edu_n,Lower secondary (6-8),3,.0640287463396496,.0084118461
+ind_wt,oop,total,.2,che_oop_tot20,head_edu_n,Secondary (9-SLC),4,.060803815215325,.006859865
+ind_wt,oop,total,.2,che_oop_tot20,head_edu_n,Higher secondary,5,.0538421806091172,.0095215095
+ind_wt,oop,total,.2,che_oop_tot20,head_edu_n,Bachelor and above,6,.0465951467843342,.010437054
+ind_wt,oop,total,.2,che_oop_tot20,has_elderly,0,0,.065671787958793,.0044722869
+ind_wt,oop,total,.2,che_oop_tot20,has_elderly,1,1,.1076720480845867,.010169526
+ind_wt,oop,total,.2,che_oop_tot20,has_disabled_member,0,0,.0689944925620725,.0042065349
+ind_wt,oop,total,.2,che_oop_tot20,has_disabled_member,1,1,.1746536682199024,.023646485
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,poor,0,0,.0439509994771244,.003570155
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,poor,1,1,.0781932660543243,.010095358
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,quintile_pcep,1 (poorest),1,.0791477714165908,.010221807
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,quintile_pcep,2,2,.0652647553246049,.0087983059
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,quintile_pcep,3,3,.0517800812292579,.0063351882
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,quintile_pcep,4,4,.0376799420046846,.0064677577
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,quintile_pcep,5 (richest),5,.0205399576510784,.0034420078
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,prov,Koshi,1,.0426751414685734,.0063470243
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,prov,Madhesh,2,.0800772454413002,.015420888
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,prov,Bagmati,3,.0487315413761529,.0060008848
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,prov,Gandaki,4,.0480319265946653,.0079368288
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,prov,Lumbini,5,.0318208064254345,.0061376463
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,prov,Karnali,6,.0427844975681347,.0069300295
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,prov,Sudurpaschim,7,.0444069543751541,.0078360811
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,ad_4,Kathmandu,1,.0587280474991299,.010019229
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,ad_4,Other urban,2,.0514707330605939,.0052152043
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,ad_4,Rural,3,.0470184371002999,.0073135439
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,caste_ethnicity,Hill Caste,11,.0452374810621562,.0045876848
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,caste_ethnicity,Madhesh/Tarai Caste,12,.0784532426525195,.014515683
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,caste_ethnicity,Mountain/Hill Janajati,21,.0405682986488661,.0051319669
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,caste_ethnicity,Tarai Janajati,22,.0274775962304963,.0068738856
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,caste_ethnicity,Hill Dalit,31,.0473050793927948,.008015478
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,caste_ethnicity,Madhesh/Tarai Dalit,32,.1021603518932578,.027337087
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,caste_ethnicity,Religions/Linguistic group,40,.0525348003313378,.01348999
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,caste_ethnicity,Others & Not stated,50,.087815347196369,.055371426
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,head_edu_n,No education,0,.0754706589998143,.0093261991
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,head_edu_n,Informal/literate,1,.0462874602959408,.017388765
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,head_edu_n,Primary (1-5),2,.0474771316933163,.0061499886
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,head_edu_n,Lower secondary (6-8),3,.0446973198676932,.0076002423
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,head_edu_n,Secondary (9-SLC),4,.0363910317810647,.0050728796
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,head_edu_n,Higher secondary,5,.0395436790671442,.0079381615
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,head_edu_n,Bachelor and above,6,.0238673356030854,.0077974442
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,has_elderly,0,0,.0458178119942499,.0036218725
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,has_elderly,1,1,.0651350136917789,.0088897115
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,has_disabled_member,0,0,.0490614378365877,.0037381847
+ind_wt,oopg,nonfood,.25,che_oopg_nf25,has_disabled_member,1,1,.0741488968397069,.014400496
+ind_wt,oop,nonfood,.25,che_oop_nf25,poor,0,0,.1290890616333915,.0060713915
+ind_wt,oop,nonfood,.25,che_oop_nf25,poor,1,1,.1961770371045897,.015576158
+ind_wt,oop,nonfood,.25,che_oop_nf25,quintile_pcep,1 (poorest),1,.1969666471584064,.015741205
+ind_wt,oop,nonfood,.25,che_oop_nf25,quintile_pcep,2,2,.16337192951676,.012165122
+ind_wt,oop,nonfood,.25,che_oop_nf25,quintile_pcep,3,3,.1432952951591753,.010764999
+ind_wt,oop,nonfood,.25,che_oop_nf25,quintile_pcep,4,4,.1194025979486043,.010624303
+ind_wt,oop,nonfood,.25,che_oop_nf25,quintile_pcep,5 (richest),5,.0903107661108227,.019998308
+ind_wt,oop,nonfood,.25,che_oop_nf25,prov,Koshi,1,.1241382999272769,.013007521
+ind_wt,oop,nonfood,.25,che_oop_nf25,prov,Madhesh,2,.1708799536756574,.014878022
+ind_wt,oop,nonfood,.25,che_oop_nf25,prov,Bagmati,3,.1407311685871031,.012036825
+ind_wt,oop,nonfood,.25,che_oop_nf25,prov,Gandaki,4,.1125330994174699,.01270078
+ind_wt,oop,nonfood,.25,che_oop_nf25,prov,Lumbini,5,.1328767535533794,.014674009
+ind_wt,oop,nonfood,.25,che_oop_nf25,prov,Karnali,6,.1305498433649399,.015350447
+ind_wt,oop,nonfood,.25,che_oop_nf25,prov,Sudurpaschim,7,.1673320493834654,.014696934
+ind_wt,oop,nonfood,.25,che_oop_nf25,ad_4,Kathmandu,1,.1554127213333419,.017736228
+ind_wt,oop,nonfood,.25,che_oop_nf25,ad_4,Other urban,2,.145589008232495,.0077426834
+ind_wt,oop,nonfood,.25,che_oop_nf25,ad_4,Rural,3,.1326256965343459,.0095871463
+ind_wt,oop,nonfood,.25,che_oop_nf25,caste_ethnicity,Hill Caste,11,.1423666816959611,.0087006353
+ind_wt,oop,nonfood,.25,che_oop_nf25,caste_ethnicity,Madhesh/Tarai Caste,12,.178683450024308,.017751988
+ind_wt,oop,nonfood,.25,che_oop_nf25,caste_ethnicity,Mountain/Hill Janajati,21,.1227151640368762,.010047452
+ind_wt,oop,nonfood,.25,che_oop_nf25,caste_ethnicity,Tarai Janajati,22,.0778959323300561,.014291673
+ind_wt,oop,nonfood,.25,che_oop_nf25,caste_ethnicity,Hill Dalit,31,.1919735732827253,.034965511
+ind_wt,oop,nonfood,.25,che_oop_nf25,caste_ethnicity,Madhesh/Tarai Dalit,32,.1756492289836247,.032077707
+ind_wt,oop,nonfood,.25,che_oop_nf25,caste_ethnicity,Religions/Linguistic group,40,.1362880518865583,.024384173
+ind_wt,oop,nonfood,.25,che_oop_nf25,caste_ethnicity,Others & Not stated,50,.2810091056064128,.17718856
+ind_wt,oop,nonfood,.25,che_oop_nf25,head_edu_n,No education,0,.1802519252753298,.011169684
+ind_wt,oop,nonfood,.25,che_oop_nf25,head_edu_n,Informal/literate,1,.1326749725866591,.024292521
+ind_wt,oop,nonfood,.25,che_oop_nf25,head_edu_n,Primary (1-5),2,.1546554000102953,.015674796
+ind_wt,oop,nonfood,.25,che_oop_nf25,head_edu_n,Lower secondary (6-8),3,.110827856858769,.011012733
+ind_wt,oop,nonfood,.25,che_oop_nf25,head_edu_n,Secondary (9-SLC),4,.1295187101102338,.011056205
+ind_wt,oop,nonfood,.25,che_oop_nf25,head_edu_n,Higher secondary,5,.1192462114069891,.015228676
+ind_wt,oop,nonfood,.25,che_oop_nf25,head_edu_n,Bachelor and above,6,.0697998037242866,.012195716
+ind_wt,oop,nonfood,.25,che_oop_nf25,has_elderly,0,0,.1234125685304318,.0054399967
+ind_wt,oop,nonfood,.25,che_oop_nf25,has_elderly,1,1,.1967926545107372,.012684646
+ind_wt,oop,nonfood,.25,che_oop_nf25,has_disabled_member,0,0,.1327491952046508,.0055355146
+ind_wt,oop,nonfood,.25,che_oop_nf25,has_disabled_member,1,1,.268954575966122,.028629057
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,poor,0,0,.0169708542664908,.001941544
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,poor,1,1,.0399134690021353,.0077137304
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,quintile_pcep,1 (poorest),1,.0404006928017235,.0078119384
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,quintile_pcep,2,2,.0234049410022801,.0045597628
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,quintile_pcep,3,3,.0199809396938049,.0039733117
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,quintile_pcep,4,4,.0168452373701862,.0034868156
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,quintile_pcep,5 (richest),5,.0074439319195081,.0022959285
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,prov,Koshi,1,.022564268339897,.0043805088
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,prov,Madhesh,2,.0342745083128593,.0087373089
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,prov,Bagmati,3,.0203893275105728,.0036063648
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,prov,Gandaki,4,.0222035306012815,.0050919182
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,prov,Lumbini,5,.0089615075742895,.0026962734
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,prov,Karnali,6,.0219077924199487,.0048721046
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,prov,Sudurpaschim,7,.0165638432947658,.0049924091
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,ad_4,Kathmandu,1,.0205280708580238,.0055828462
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,ad_4,Other urban,2,.0217883557947407,.0030743899
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,ad_4,Rural,3,.0216855793388502,.0042796857
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,caste_ethnicity,Hill Caste,11,.0180790563876274,.0028554874
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,caste_ethnicity,Madhesh/Tarai Caste,12,.0318672277366494,.0096260114
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,caste_ethnicity,Mountain/Hill Janajati,21,.0198745545714682,.0032915501
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,caste_ethnicity,Tarai Janajati,22,.0123092537429502,.0048809783
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,caste_ethnicity,Hill Dalit,31,.0195248818356053,.0043168678
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,caste_ethnicity,Madhesh/Tarai Dalit,32,.0402227719046909,.012783552
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,caste_ethnicity,Religions/Linguistic group,40,.0221444053484138,.0088366419
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,caste_ethnicity,Others & Not stated,50,.087815347196369,.055371426
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,head_edu_n,No education,0,.0313209907963287,.0050274679
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,head_edu_n,Informal/literate,1,.0271840719907703,.015896151
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,head_edu_n,Primary (1-5),2,.0170056646521078,.0033895678
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,head_edu_n,Lower secondary (6-8),3,.0212152021317363,.0048128781
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,head_edu_n,Secondary (9-SLC),4,.0141186523463936,.0028767365
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,head_edu_n,Higher secondary,5,.023268010860246,.0066992794
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,head_edu_n,Bachelor and above,6,.0120549636170253,.0059759733
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,has_elderly,0,0,.0208285065744638,.0024059897
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,has_elderly,1,1,.0238470999059858,.0042354325
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,has_disabled_member,0,0,.0206960861368791,.0021625918
+ind_wt,oopg,nonfood,.4,che_oopg_nf40,has_disabled_member,1,1,.0333772668898232,.011101625
+ind_wt,oop,nonfood,.4,che_oop_nf40,poor,0,0,.0622633737103809,.0039740154
+ind_wt,oop,nonfood,.4,che_oop_nf40,poor,1,1,.1093285331515325,.011657377
+ind_wt,oop,nonfood,.4,che_oop_nf40,quintile_pcep,1 (poorest),1,.1090579833359505,.011759664
+ind_wt,oop,nonfood,.4,che_oop_nf40,quintile_pcep,2,2,.0780601683292777,.0082073156
+ind_wt,oop,nonfood,.4,che_oop_nf40,quintile_pcep,3,3,.0724124120474844,.007292062
+ind_wt,oop,nonfood,.4,che_oop_nf40,quintile_pcep,4,4,.0658764119007356,.0074138115
+ind_wt,oop,nonfood,.4,che_oop_nf40,quintile_pcep,5 (richest),5,.0335464842451244,.0047042449
+ind_wt,oop,nonfood,.4,che_oop_nf40,prov,Koshi,1,.0701839332107057,.009027008
+ind_wt,oop,nonfood,.4,che_oop_nf40,prov,Madhesh,2,.0734093708975314,.012835639
+ind_wt,oop,nonfood,.4,che_oop_nf40,prov,Bagmati,3,.0784132705685953,.0090451408
+ind_wt,oop,nonfood,.4,che_oop_nf40,prov,Gandaki,4,.0602053194775213,.0084233787
+ind_wt,oop,nonfood,.4,che_oop_nf40,prov,Lumbini,5,.0609623647986913,.0082792519
+ind_wt,oop,nonfood,.4,che_oop_nf40,prov,Karnali,6,.0701329193595919,.011226485
+ind_wt,oop,nonfood,.4,che_oop_nf40,prov,Sudurpaschim,7,.091733981066085,.01038831
+ind_wt,oop,nonfood,.4,che_oop_nf40,ad_4,Kathmandu,1,.0771154461427821,.012297441
+ind_wt,oop,nonfood,.4,che_oop_nf40,ad_4,Other urban,2,.0710733481142172,.0060923737
+ind_wt,oop,nonfood,.4,che_oop_nf40,ad_4,Rural,3,.0713371056583282,.0059941891
+ind_wt,oop,nonfood,.4,che_oop_nf40,caste_ethnicity,Hill Caste,11,.0754026584822144,.0058006928
+ind_wt,oop,nonfood,.4,che_oop_nf40,caste_ethnicity,Madhesh/Tarai Caste,12,.0836716609736665,.011568216
+ind_wt,oop,nonfood,.4,che_oop_nf40,caste_ethnicity,Mountain/Hill Janajati,21,.0655581721737023,.0069905464
+ind_wt,oop,nonfood,.4,che_oop_nf40,caste_ethnicity,Tarai Janajati,22,.0393824621038105,.0091341306
+ind_wt,oop,nonfood,.4,che_oop_nf40,caste_ethnicity,Hill Dalit,31,.0855551354171245,.011066871
+ind_wt,oop,nonfood,.4,che_oop_nf40,caste_ethnicity,Madhesh/Tarai Dalit,32,.0887251763904742,.018098546
+ind_wt,oop,nonfood,.4,che_oop_nf40,caste_ethnicity,Religions/Linguistic group,40,.0700078577828771,.017443946
+ind_wt,oop,nonfood,.4,che_oop_nf40,caste_ethnicity,Others & Not stated,50,.087815347196369,.055371426
+ind_wt,oop,nonfood,.4,che_oop_nf40,head_edu_n,No education,0,.0971779994646836,.0078027644
+ind_wt,oop,nonfood,.4,che_oop_nf40,head_edu_n,Informal/literate,1,.07928297832266,.020888485
+ind_wt,oop,nonfood,.4,che_oop_nf40,head_edu_n,Primary (1-5),2,.0685292082033584,.007343167
+ind_wt,oop,nonfood,.4,che_oop_nf40,head_edu_n,Lower secondary (6-8),3,.0621889872953707,.0080790753
+ind_wt,oop,nonfood,.4,che_oop_nf40,head_edu_n,Secondary (9-SLC),4,.0591235879192463,.0070386771
+ind_wt,oop,nonfood,.4,che_oop_nf40,head_edu_n,Higher secondary,5,.0647494776031524,.011925753
+ind_wt,oop,nonfood,.4,che_oop_nf40,head_edu_n,Bachelor and above,6,.0285037300388575,.008378841
+ind_wt,oop,nonfood,.4,che_oop_nf40,has_elderly,0,0,.0613803364251733,.0042552068
+ind_wt,oop,nonfood,.4,che_oop_nf40,has_elderly,1,1,.1010610713739925,.0082018701
+ind_wt,oop,nonfood,.4,che_oop_nf40,has_disabled_member,0,0,.0636122629653133,.0039093974
+ind_wt,oop,nonfood,.4,che_oop_nf40,has_disabled_member,1,1,.1758697955930772,.023707533

@@ -1,0 +1,13 @@
+weight,scope,denominator,threshold,measure,variable,mean,concentration_index,rank_weighted
+hhs_wt,oopg,ctp_ae,.1,headcount,che_oopg_ctp10_ae,.1528058757446726,-.12582481,.1720326466698592
+hhs_wt,oopg,ctp_ae,.1,overshoot,over_oopg_ctp10_ae,.0224476073947589,-.012592343,.0227302753492755
+hhs_wt,oopg,ctp_ae,.25,headcount,che_oopg_ctp25_ae,.0502278087933075,-.051994938,.0528394006100897
+hhs_wt,oopg,ctp_ae,.25,overshoot,over_oopg_ctp25_ae,.009047593470477,.12515119,.0079152763736161
+hhs_wt,oopg,ctp_ae,.4,headcount,che_oopg_ctp40_ae,.0236101211977846,.082342267,.0216660102171597
+hhs_wt,oopg,ctp_ae,.4,overshoot,over_oopg_ctp40_ae,.0038848177607681,.27909392,.0028005886894286
+ind_wt,oopg,ctp_ae,.1,headcount,che_oopg_ctp10_ae,.1654437199988581,-.13494758,.1877699499020843
+ind_wt,oopg,ctp_ae,.1,overshoot,over_oopg_ctp10_ae,.0237260879277055,-.036328051,.0245880104262071
+ind_wt,oopg,ctp_ae,.25,headcount,che_oopg_ctp25_ae,.0539820805900124,-.076711625,.0581231335202378
+ind_wt,oopg,ctp_ae,.25,overshoot,over_oopg_ctp25_ae,.0093275596184501,.095640287,.0084354691306916
+ind_wt,oopg,ctp_ae,.4,headcount,che_oopg_ctp40_ae,.0240939260099481,.061208963,.0226191617746575
+ind_wt,oopg,ctp_ae,.4,overshoot,over_oopg_ctp40_ae,.0039093981392926,.23265044,.0029998749195694

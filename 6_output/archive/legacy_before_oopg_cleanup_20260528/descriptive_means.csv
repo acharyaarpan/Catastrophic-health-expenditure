@@ -1,0 +1,44 @@
+statistic,variable,variable_label,weight,estimate,se
+mean,head_age,Age of household head,hhs_wt,44.01475611385301,.21190648
+mean,hhsize,Household size,hhs_wt,4.093115399658341,.035313521
+mean,adult_equiv,"Adult equivalents (Citro-Michael: p=0.5, theta=0.75)",hhs_wt,2.515169379498384,.015279616
+mean,dep_ratio,Dependency ratio ((children + elderly) / working-age),hhs_wt,.6916246269224747,.013974709
+mean,oopg,"OOPG: communicable/injury OOP, monthly HH amount (NPR)",hhs_wt,1341.219939655322,73.789421
+mean,oop,"OOP: OOPG + NCD, monthly HH amount (NPR)",hhs_wt,2852.232789727179,121.87357
+mean,hh_ncd_total_annual,"HH total NCD expenditure (past year, NPR)",hhs_wt,18132.15426624488,1138.9585
+mean,total_consumption,Total annual household consumption (NPR),hhs_wt,535681.8648705933,10958.262
+mean,total_cons_mo,"Official total monthly household consumption, nominal (NPR)",hhs_wt,44640.15540588252,913.18848
+mean,pctot_consumption,"Per capita total consumption, simple (NPR)",ind_wt,130758.2250021139,3181.9331
+mean,pc_cons_ae,"Per capita consumption, adult-equivalent adjusted (NPR)",ind_wt,208136.9753234029,4526.9614
+mean,pcep,"Official real per-capita consumption (NPR/year, excludes health)",ind_wt,129724.5925042518,1889.9108
+mean,pcep_food,Real per-capita food consumption (NPR/year),ind_wt,60575.88164668675,765.31372
+mean,pcep_nonfood,Real per-capita nonfood consumption (NPR/year),ind_wt,69148.71080003527,1497.191
+proportion,head_female,Female-headed household (1=yes),hhs_wt,.371072330236571,.0079072081
+proportion,head_literate,"Household head is literate (1=yes, from S07 q07_02)",hhs_wt,.7255511357468499,.0079932194
+proportion,has_elderly,Has elderly member aged 65+ (1=yes),hhs_wt,.2341592780309614,.0066405246
+proportion,has_under5,Has child under 5 (1=yes),hhs_wt,.2835067142108764,.0070049036
+proportion,has_disabled_member,Has member with functional disability (1=yes),hhs_wt,.0642182558062041,.004027823
+proportion,receives_remittance,"Receives remittance/transfer (from absentees or others, 1=yes)",hhs_wt,.7683112336885904,.0086052716
+proportion,remit_absentee,"Received remittance from absentee (S14A q14_15, 1=yes)",hhs_wt,.3575624577962099,.010168541
+proportion,remit_other,"Received transfer from non-member (S15 q15_11, 1=yes)",hhs_wt,.6396884125838854,.011683666
+proportion,has_loan,"Has outstanding loan (S13 q13_01, 1=yes)",hhs_wt,.6379328772783223,.0087827668
+proportion,che_oopg_tot10,CHE: OOPG > 10% reconstructed nominal total consumption plus OOPG,hhs_wt,.0739960321624281,.004081958
+proportion,che_oop_tot10,CHE: OOP > 10% reconstructed nominal total consumption plus OOPG,hhs_wt,.1847377266789791,.0063513429
+proportion,che_oopg_tot20,CHE: OOPG > 20% reconstructed nominal total consumption plus OOPG,hhs_wt,.0266078580771431,.0022268905
+proportion,che_oop_tot20,CHE: OOP > 20% reconstructed nominal total consumption plus OOPG,hhs_wt,.0780286069763674,.0041666613
+proportion,che_oopg_nf25,CHE: OOPG > 25% real nonfood consumption plus OOPG,hhs_wt,.0498121162228454,.0031766016
+proportion,che_oop_nf25,CHE: OOP > 25% real nonfood consumption plus OOPG,hhs_wt,.1427282041774091,.0054419436
+proportion,che_oopg_nf40,CHE: OOPG > 40% real nonfood consumption plus OOPG,hhs_wt,.0216099148970662,.0019531362
+proportion,che_oop_nf40,CHE: OOP > 40% real nonfood consumption plus OOPG,hhs_wt,.0757128929807179,.0040005799
+proportion,improved_sanitation,Has improved sanitation/flush toilet (1=yes),ind_wt,.8592421543761456,.0088156667
+proportion,improved_water,Has improved drinking water source (1=yes),ind_wt,.5461945469208159,.023785111
+proportion,clean_fuel,Uses clean cooking fuel: LPG/biogas/electricity (1=yes),ind_wt,.4450000998690853,.019484624
+proportion,poor,"Poverty status (1=poor, 0=non-poor)",ind_wt,.2027048505094489,.0086079836
+proportion,che_oopg_tot10,CHE: OOPG > 10% reconstructed nominal total consumption plus OOPG,ind_wt,.078100499958119,.0050574052
+proportion,che_oop_tot10,CHE: OOP > 10% reconstructed nominal total consumption plus OOPG,ind_wt,.1878020635016678,.0064767264
+proportion,che_oopg_tot20,CHE: OOPG > 20% reconstructed nominal total consumption plus OOPG,ind_wt,.0271366010834158,.0029479477
+proportion,che_oop_tot20,CHE: OOP > 20% reconstructed nominal total consumption plus OOPG,ind_wt,.0767044564438395,.0047291894
+proportion,che_oopg_nf25,CHE: OOPG > 25% real nonfood consumption plus OOPG,ind_wt,.0508920730047604,.0039254213
+proportion,che_oop_nf25,CHE: OOP > 25% real nonfood consumption plus OOPG,ind_wt,.1426881196722623,.0057279593
+proportion,che_oopg_nf40,CHE: OOPG > 40% real nonfood consumption plus OOPG,ind_wt,.0216214335567755,.0023070185
+proportion,che_oop_nf40,CHE: OOP > 40% real nonfood consumption plus OOPG,ind_wt,.0718037098191029,.0042436556

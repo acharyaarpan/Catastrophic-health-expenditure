@@ -1,0 +1,3 @@
+check,max_abs_difference,status
+total share: AE vs household,1.11022302463e-16,PASS
+nonfood share: AE vs household,2.22044604925e-16,PASS
